@@ -1,0 +1,6 @@
+# vim backup file
+*.sw*
+
+doc/tags
+.netrwhist
+.VimballRecord
