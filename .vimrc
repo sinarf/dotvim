@@ -26,8 +26,6 @@ set ignorecase
 set wildmenu
 " Show autocomplete menus.
 set wildmenu
-" colors I like
-colorscheme desert
 " enable the filetype plugins
 filetype plugin on
 " Don't display the menu or toolbar. Just the screen.
