@@ -1,3 +1,2 @@
-
 " colors I like
-colorscheme desert
+colorscheme solarized
