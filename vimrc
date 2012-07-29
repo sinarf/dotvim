@@ -119,3 +119,4 @@ augroup json_autocmd
   autocmd FileType json set foldmethod=syntax
 augroup END 
 
+au BufNewFile,BufRead *.gradle setf groovy
