@@ -61,11 +61,11 @@ set listchars=tab:▸\ ,eol:¬
 set list
 
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <A-Up> [e
+nmap <A-Down> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <A-Up> [egv
+vmap <A-Down> ]egv
 
 " indentation 
 nmap <D-[> <<
