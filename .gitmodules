@@ -4,6 +4,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/vim-pad"]
-	path = bundle/vim-pad
-	url = https://github.com/fmoralesc/vim-pad
+[submodule "bundle/vim-notes"]
+	path = bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
