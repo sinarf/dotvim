@@ -120,3 +120,6 @@ augroup json_autocmd
 augroup END 
 
 au BufNewFile,BufRead *.gradle setf groovy
+
+let g:notes_directory = '~/Dropbox/notes'
+let g:notes_suffix = '.txt'
