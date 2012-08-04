@@ -123,3 +123,7 @@ au BufNewFile,BufRead *.gradle setf groovy
 
 let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
+
+" color for the command line. 
+colorscheme darkblue
+
