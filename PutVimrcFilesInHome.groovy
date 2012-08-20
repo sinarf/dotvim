@@ -27,13 +27,13 @@ if (accept) {
 	def vimrc = new File("$HOME/.vimrc")
 	vimrc.writable = true
 	vimrc.write ''
-	vimrc << new File(".vimrc").asWritable()
+	vimrc << new File("vimrc").asWritable()
 	vimrc.writable = false
 
 	def gvimrc = new File("$HOME/.gvimrc") 
 	gvimrc.writable = true
 	gvimrc.write ''
-	gvimrc << new File(".gvimrc").asWritable()
+	gvimrc << new File("gvimrc").asWritable()
 	gvimrc.writable = false
 	println 'done'
 } else {
