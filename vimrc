@@ -16,8 +16,16 @@ set tabstop=4
 set shiftwidth=4
 " Automatically indent when adding a curly bracket, etc.
 set smartindent
-" Use UTF-8
-set encoding=utf-8
+" Use UTF-8 from http://vim.wikia.com/wiki/Working_with_Unicode
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
 
 " Search as you type.
 set incsearch
@@ -124,4 +132,5 @@ let g:notes_suffix = '.txt'
 
 " color for the command line. 
 colorscheme darkblue
-
+" NERDTree openned by default
+autocmd vimenter * NERDTree
