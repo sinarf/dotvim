@@ -18,6 +18,7 @@ set shiftwidth=4
 set smartindent
 " Use UTF-8
 set encoding=utf-8
+
 " Search as you type.
 set incsearch
 " Ignore case when searching.
@@ -26,19 +27,13 @@ set ignorecase
 set wildmenu
 " Show autocomplete menus.
 set wildmenu
-" colors I like
-colorscheme desert
 " enable the filetype plugins
 filetype plugin on
-" Don't display the menu or toolbar. Just the screen.
-"set guioptions-=m
-set guioptions-=T
-set guioptions-=r
 " Font. Very important.
 if has('win32') || has('win64')
-    set guifont=Consolas:h10:cANSI
+	set guifont=Ubuntu\ Mono:h10
 elseif has('unix')
-	let &guifont="Ubuntu Mono 10"
+	set guifont=Ubuntu\ Mono\ 10
 endif
 
 " keyboard mapping / shortcut
@@ -59,6 +54,9 @@ set number
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 set list
+"Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
 
 " Bubble single lines
 nmap <A-Up> [e
@@ -94,7 +92,7 @@ function! DoPrettyXML()
 	2d
 	$d
 	" restore the 'normal' indentation,
-	which is one extra level
+	which is one extra levelM
 	" too deep due to the extra tags we
 	wrapped around the document.
 	silent %<
