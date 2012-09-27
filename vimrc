@@ -133,4 +133,10 @@ let g:notes_suffix = '.txt'
 " color for the command line. 
 colorscheme darkblue
 " NERDTree openned by default
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
+
+" just press F7 to format the stuff.
+map <F7> mzgg=G`z<CR>
+
+colorscheme solarized
+let g:solarized_termcolors=256
