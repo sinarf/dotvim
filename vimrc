@@ -130,13 +130,9 @@ au BufNewFile,BufRead *.gradle setf groovy
 let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
 
-" color for the command line. 
-colorscheme darkblue
 " NERDTree openned by default
 " autocmd vimenter * NERDTree
 
 " just press F7 to format the stuff.
 map <F7> mzgg=G`z<CR>
-
-colorscheme solarized
-let g:solarized_termcolors=256
+colorscheme desert
