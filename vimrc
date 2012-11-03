@@ -39,9 +39,9 @@ set wildmenu
 filetype plugin on
 " Font. Very important.
 if has('win32') || has('win64')
-	set guifont=Ubuntu\ Mono:h10
+	set guifont=Ubuntu\ Mono:h12
 elseif has('unix')
-	set guifont=Ubuntu\ Mono\ 10
+	set guifont=Ubuntu\ Mono\ 12
 endif
 
 " keyboard mapping / shortcut
@@ -136,3 +136,6 @@ let g:notes_suffix = '.txt'
 " just press F7 to format the stuff.
 map <F7> mzgg=G`z<CR>
 colorscheme desert
+
+" Ctrl+Space completion for java.
+:let g:vjde_completion_key='<c-space>' 
