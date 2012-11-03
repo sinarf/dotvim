@@ -13,3 +13,9 @@
 [submodule "bundle/vjde"]
 	path = bundle/vjde
 	url = https://github.com/vim-scripts/Vim-JDE.git
+[submodule "vim-maven-ide"]
+	path = vim-maven-ide
+	url = https://github.com/dareni/vim-maven-ide.git
+[submodule "bundle/vim-maven-ide"]
+	path = bundle/vim-maven-ide
+	url = https://github.com/dareni/vim-maven-ide.git
