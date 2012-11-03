@@ -10,3 +10,6 @@
 [submodule "bundle/notes"]
 	path = bundle/notes
 	url = https://github.com/xolox/vim-notes.git
+[submodule "bundle/vjde"]
+	path = bundle/vjde
+	url = https://github.com/vim-scripts/Vim-JDE.git
