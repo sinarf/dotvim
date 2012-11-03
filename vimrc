@@ -52,7 +52,6 @@ imap <c-s> <Esc>:w<CR>a
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-au BufRead,BufNewFile *.viki set filetype=viki
 set wrap linebreak textwidth=0
 
 " enable folding for my favorites languages 
