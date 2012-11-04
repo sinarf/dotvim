@@ -19,3 +19,6 @@
 [submodule "bundle/vim-maven-ide"]
 	path = bundle/vim-maven-ide
 	url = https://github.com/dareni/vim-maven-ide.git
+[submodule "bundle/vim-notes"]
+	path = bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
