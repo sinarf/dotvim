@@ -1,5 +1,7 @@
 " sinarf vimrc 
 " created on April 29, 2011
+" change the leader key 
+let mapleader = ","
 
 " Enable pathogen
 call pathogen#runtime_append_all_bundles()
