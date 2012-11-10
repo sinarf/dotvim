@@ -31,8 +31,8 @@ endif
 
 " Search as you type.
 set incsearch
-" Ignore case when searching.
-set ignorecase
+" smart case when searching.
+set smartcase
 " Show autocomplete menus.
 set wildmenu
 " Show autocomplete menus.
