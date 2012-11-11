@@ -138,5 +138,6 @@ let g:notes_suffix = '.txt'
 map <F7> mzgg=G`z<CR>
 colorscheme desert
 
-" Ctrl+Space completion for java.
-:let g:vjde_completion_key='<c-space>' 
+" Makeshift 
+nnoremap    <F5>   :<C-U>make<CR>
+
