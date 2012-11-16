@@ -23,7 +23,7 @@ System.in.withReader {
 }
 
 if (accept) {
-	println 'Copie files'
+	println 'Copy files'
 	def vimrc = new File("$HOME/.vimrc")
 	vimrc.writable = true
 	vimrc.write ''
