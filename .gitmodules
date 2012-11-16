@@ -7,15 +7,3 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/notes"]
-	path = bundle/notes
-	url = https://github.com/xolox/vim-notes.git
-[submodule "bundle/vim-notes"]
-	path = bundle/vim-notes
-	url = https://github.com/xolox/vim-notes.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://git.wincent.com/command-t.git
-[submodule "bundle/makeshift"]
-	path = bundle/makeshift
-	url = git://github.com/johnsyweb/vim-makeshift.git
