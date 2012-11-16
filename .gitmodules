@@ -13,3 +13,6 @@
 [submodule "bundle/vim-shell"]
 	path = bundle/vim-shell
 	url = http://github.com/xolox/vim-shell
+[submodule "bundle/fastfileselector"]
+	path = bundle/fastfileselector
+	url = https://bitbucket.org/madevgeny/fastfileselector

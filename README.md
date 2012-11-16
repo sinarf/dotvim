@@ -3,8 +3,7 @@ This is my dot vim configuration. To use this on a new PC.
 You should know that I change my settings like crazy and I break my installation very often. 
 
 * Prerequisites : 
-	* ruby should be installed on the system
-	* vim should have been built with the same version of ruby.
+	* vim should have been built with python support (needed for some plugins).
 
 * On Linux 
 ```shell
