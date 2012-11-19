@@ -108,3 +108,8 @@ colorscheme desert
 
 " TODO make this active only for x* files
 map <F8> <ESC>:silent %!xmllint --format -<CR>
+
+" status line
+autocmd! ColorScheme *  source ~/.vim/plugin/statusline.vim
+
+
