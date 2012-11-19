@@ -7,7 +7,7 @@ You should know that I change my settings like crazy and I break my installation
 
 * On Linux 
 ```shell
-cd ~ && git clone git@github.com:sinarf/dotvim.git .vim && ln -sf .vim/vimrc .vimrc && ln -sf .vim/gvimrc .gvimrc && git submodule init && git submodule update
+cd ~ && git clone git@github.com:sinarf/dotvim.git .vim && ln -sf .vim/vimrc .vimrc && ln -sf .vim/gvimrc .gvimrc && cd .vim && git submodule init && git submodule update
 ```
 
 * On Windows  (needs groovy installed).
