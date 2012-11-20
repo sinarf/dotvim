@@ -42,7 +42,7 @@ filetype plugin on
 " Font. Very important.
 if has('win32') || has('win64')
 	set guifont=Ubuntu\ Mono:h12
-elseif has('unix')
+elseif has('unix'
 	set guifont=Ubuntu\ Mono\ 12
 endif
 
@@ -107,9 +107,20 @@ map <F7> mzgg=G`z<CR>
 colorscheme desert
 
 " TODO make this active only for x* files
-map <F8> <ESC>:silent %!xmllint --format -<CR>
+map <C-F> <ESC>:silent %!xmllint --format -<CR>
 
-" status line
-autocmd! ColorScheme *  source ~/.vim/plugin/statusline.vim
 
+function! Browser ()
+  let line0 = getline (".")
+  let line = matchstr (line0, "http[^ ]*")
+  :if line==""
+  let line = matchstr (line0, "ftp[^ ]*")
+  :endif
+  :if line==""
+  let line = matchstr (line0, "file[^ ]*")
+  :endif
+  " echo line
+  exec ":silent !mozilla ".line
+endfunction
+map \w :call Browser ()<CR>
 
