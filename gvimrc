@@ -5,7 +5,7 @@
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_contrast="high"    "default value is normal
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 " ------------------------------------------------------------------
 

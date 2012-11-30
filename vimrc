@@ -41,8 +41,8 @@ set wildmenu
 filetype plugin on
 " Font. Very important.
 if has('win32') || has('win64')
-	set guifont=Ubuntu\ Mono:h12
-elseif has('unix'
+	set guifontConsolas:h12
+elseif has('unix')
 	set guifont=Ubuntu\ Mono\ 12
 endif
 
