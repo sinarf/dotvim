@@ -125,3 +125,4 @@ endfunction
 map \w :call Browser ()<CR>
 
 set ffs=unix,dos
+set ff=unix
