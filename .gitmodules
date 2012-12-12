@@ -14,5 +14,8 @@
 	path = bundle/fastfileselector
 	url = https://bitbucket.org/madevgeny/fastfileselector
 [submodule "bundles/notes"]
-	path = bundles/notes
+	path = bundle/notes
 	url = https://github.com/xolox/vim-notes
+[submodule "bundle/todo-txt"]
+	path = bundle/todo-txt
+	url = https://github.com/davidoc/todo.txt-vim.git
