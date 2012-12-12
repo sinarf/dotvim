@@ -124,5 +124,9 @@ function! Browser ()
 endfunction
 map \w :call Browser ()<CR>
 
-set ffs=unix,dos
+set ffs=unix
 set ff=unix
+
+" format JSON
+map <Leader>j :%!python -m json.tool<CR>
+
