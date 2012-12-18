@@ -43,7 +43,7 @@ filetype plugin on
 if has('win32') || has('win64')
 	set guifont=Consolas:h12
 elseif has('unix')
-	set guifont=Ubuntu\ Mono\ 12
+	set guifont=Ubuntu\ Mono\ 14
 endif
 
 " keyboard mapping / shortcut
@@ -60,12 +60,14 @@ set wrap linebreak textwidth=0
 autocmd BufNewFile,BufRead *.java set foldmethod=syntax
 
 set number
+
+" Show invisible characters. 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-set list
+" set listchars=tab:▸\ ,eol:¬
+" set list
 "Invisible character colors
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+" highlight NonText guifg=#4a4a59
+" highlight SpecialKey guifg=#4a4a59
 
 " Bubble single lines
 nmap <A-Up> [e
