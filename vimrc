@@ -1,4 +1,8 @@
 " sinarf vimrc 
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
 " created on April 29, 2011
 " change the leader key 
 let mapleader = ","
@@ -8,9 +12,6 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
 " Enable syntax highlighting.
 syntax on
 " tab size 4
@@ -46,10 +47,6 @@ elseif has('unix')
 	set guifont=Ubuntu\ Mono\ 12
 endif
 
-" keyboard mapping / shortcut
-" To save, ctrl-s.
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
 " make mswin like copy paste source : http://superuser.com/questions/10588/how-to-make-cut-copy-paste-in-gvim-on-ubuntu-work-with-ctrlx-ctrlc-ctrlv
 source $VIMRUNTIME/mswin.vim
 behave mswin
@@ -58,14 +55,15 @@ set wrap linebreak textwidth=0
 
 " enable folding for my favorites languages 
 autocmd BufNewFile,BufRead *.java set foldmethod=syntax
+autocmd BufNewFile,BufRead *.javajet set filetype=java
 
 set number
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-set list
+" set listchars=tab:▸\ ,eol:¬
+" set list
 "Invisible character colors
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+" highlight NonText guifg=#4a4a59
+" highlight SpecialKey guifg=#4a4a59
 
 " Bubble single lines
 nmap <A-Up> [e
@@ -94,13 +92,10 @@ augroup json_autocmd
   autocmd FileType json set foldmethod=syntax
 augroup END 
 
-au BufNewFile,BufRead *.gradle setf groovy
+au BufNewFile,BufRead *.gradle set groovy
 
-let g:notes_directory = '~/Dropbox/notes'
-let g:notes_suffix = '.txt'
-
-" NERDTree openned by default
-" autocmd vimenter * NERDTree
+let g:notes_directory = "~//Dropbox//vim-notes"
+let g:notes_suffix = ".txt"
 
 " just press F7 to format the stuff.
 map <F7> mzgg=G`z<CR>
@@ -108,7 +103,6 @@ colorscheme desert
 
 " TODO make this active only for x* files
 map <F8> <ESC>:silent %!xmllint --format -<CR>
-
 
 function! Browser ()
   let line0 = getline (".")
@@ -122,7 +116,12 @@ function! Browser ()
   " echo line
   exec ":silent !mozilla ".line
 endfunction
-map \w :call Browser ()<CR>
+map <Leader>w :call Browser ()<CR>
+
+function! CleanEOL ()
+	:%s/\r\(\n\)/\1/g<CR>
+endfunction 
+map <Leader>e <ESC>:%s/\r\(\n\)/\1/g<CR>
 
 set ffs=unix
 set ff=unix
