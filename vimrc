@@ -94,9 +94,6 @@ augroup END
 
 au BufNewFile,BufRead *.gradle set groovy
 
-let g:notes_directory = "~//Dropbox//vim-notes"
-let g:notes_suffix = ".txt"
-
 " just press F7 to format the stuff.
 map <F7> mzgg=G`z<CR>
 colorscheme desert
