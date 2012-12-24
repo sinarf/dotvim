@@ -13,7 +13,6 @@ cd ~ && git clone git@github.com:sinarf/dotvim.git .vim && ln -sf .vim/vimrc .vi
 * On Windows  (needs groovy installed).
 ```shell
 cd %USERDIR% 
-git clone https://github.com:sinarf/dotvim.git vimfiles  && git submodule init && git submodule update
-cd vimfiles
+git clone https://github.com/sinarf/dotvim.git vimfiles && cd vimfiles  && git submodule init && git submodule update
 PutVimrcFilesInHome.groovy
 ```
