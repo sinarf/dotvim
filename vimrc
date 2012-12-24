@@ -44,7 +44,7 @@ filetype plugin on
 if has('win32') || has('win64')
 	set guifont=Consolas:h12
 elseif has('unix')
-	set guifont=Ubuntu\ Mono\ 12
+	set guifont=Ubuntu\ Mono\ 14
 endif
 
 " make mswin like copy paste source : http://superuser.com/questions/10588/how-to-make-cut-copy-paste-in-gvim-on-ubuntu-work-with-ctrlx-ctrlc-ctrlv
@@ -58,6 +58,8 @@ autocmd BufNewFile,BufRead *.java set foldmethod=syntax
 autocmd BufNewFile,BufRead *.javajet set filetype=java
 
 set number
+
+" Show invisible characters. 
 " Use the same symbols as TextMate for tabstops and EOLs
 " set listchars=tab:▸\ ,eol:¬
 " set list
