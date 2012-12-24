@@ -127,4 +127,7 @@ set ff=unix
 
 " format JSON
 map <Leader>j :%!python -m json.tool<CR>
+" note plugin parameter 
+let g:notes_directory = '~/Dropbox/notes'
+let g:notes_suffix = '.txt'
 
