@@ -131,3 +131,35 @@ map <Leader>j :%!python -m json.tool<CR>
 let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
 
+" Windows Management 
+" I also like to bind Ctrl+<movement> keys to move around the windows, instead
+" of using Ctrl+w + <movement>:
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+map <leader>td <Plug>TaskList
+" Python flakes 
+let g:pyflakes_use_quickfix = 0
+" Pythom completion
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+" code navigation 
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+" fuzzy code search
+nmap <leader>a <Esc>:Ack!
+" Python testing with py.test
+" Execute the tests
+nmap <silent><Leader>tf <Esc>:Pytest file<CR>
+nmap <silent><Leader>tc <Esc>:Pytest class<CR>
+nmap <silent><Leader>tm <Esc>:Pytest method<CR>
+" cycle through test errors
+nmap <silent><Leader>tn <Esc>:Pytest next<CR>
+nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
+nmap <silent><Leader>te <Esc>:Pytest error<CR>
+
+"status line 
+set statusline=%F%m%r%h%w\ %{&ff}\ [%Y]\ [\%03.3b]\ [%04l,%04v][%p%%-%L]\ %{fugitive#statusline()}
+
