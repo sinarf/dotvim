@@ -130,6 +130,11 @@ map <Leader>j :%!python -m json.tool<CR>
 " note plugin parameter 
 let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
+" The note renaming doesn't seems to work on windows, it deletes the notes. 
+" I need for this configuration to work under windows and linux. 
+if has('win32') || has('win64')
+	let g:notes_title_sync='no'
+endif
 
 " Windows Management 
 " I also like to bind Ctrl+<movement> keys to move around the windows, instead
