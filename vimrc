@@ -130,6 +130,7 @@ map <Leader>j :%!python -m json.tool<CR>
 " note plugin parameter 
 let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
+" let g:notes_title_sync=no
 
 " Windows Management 
 " I also like to bind Ctrl+<movement> keys to move around the windows, instead
