@@ -55,3 +55,9 @@
 [submodule "bundle/ropevim"]
 	path = bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
+[submodule "bundle/vim-notes"]
+	path = bundle/vim-notes
+	url = http://github.com/xolox/vim-notes
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = https://github.com/sukima/xmledit.git
