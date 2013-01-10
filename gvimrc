@@ -1,28 +1,32 @@
 " colors I like
-" ------------------------------------------------------------------
-" Solarized Colorscheme Config
-" ------------------------------------------------------------------
-let g:solarized_termcolors=256    "default value is 16
-let g:solarized_contrast="high"    "default value is normal
-syntax enable
-set background=dark
-colorscheme solarized
-" ------------------------------------------------------------------
 
-" The following items are available options, but do not need to be
-" included in your .vimrc as they are currently set to their defaults.
+if has('win32') || has('win64')
+	colorscheme desert
+else 
+	" ------------------------------------------------------------------
+	" Solarized Colorscheme Config
+	" ------------------------------------------------------------------
+	let g:solarized_termcolors=256    "default value is 16
+	let g:solarized_contrast="high"    "default value is normal
+	syntax enable
+	set background=dark
+	colorscheme solarized
+	" ------------------------------------------------------------------
 
-" let g:solarized_termtrans=0
-" let g:solarized_degrade=0
-" let g:solarized_bold=1
-" let g:solarized_underline=1
-" let g:solarized_italic=1
-" let g:solarized_diffmode="normal"
-" let g:solarized_hitrail=0
-" let g:solarized_menu=1
+	" The following items are available options, but do not need to be
+	" included in your .vimrc as they are currently set to their defaults.
+
+	" let g:solarized_termtrans=0
+	" let g:solarized_degrade=0
+	" let g:solarized_bold=1
+	" let g:solarized_underline=1
+	" let g:solarized_italic=1
+	" let g:solarized_diffmode="normal"
+	" let g:solarized_hitrail=0
+	" let g:solarized_menu=1
+endif
 " Size of GVim window
 set lines=50 columns=120
 " Don't display the menu or toolbar. Just the screen.
 " set guioptions-=m
 set guioptions-=T
-

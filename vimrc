@@ -98,7 +98,6 @@ au BufNewFile,BufRead *.gradle set groovy
 
 " just press F7 to format the stuff.
 map <F7> mzgg=G`z<CR>
-colorscheme desert
 
 " TODO make this active only for x* files
 map <F8> <ESC>:silent %!xmllint --format -<CR>
@@ -122,6 +121,7 @@ function! CleanEOL ()
 endfunction 
 map <Leader>e <ESC>:%s/\r\(\n\)/\1/g<CR>
 
+" using unix file format 	
 set ffs=unix
 set ff=unix
 
