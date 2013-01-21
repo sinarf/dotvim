@@ -21,3 +21,5 @@ behave mswin
 let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
 
+set hidden
+
