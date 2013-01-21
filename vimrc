@@ -16,3 +16,8 @@ filetype plugin indent on
 " make mswin like copy paste source : http://superuser.com/questions/10588/how-to-make-cut-copy-paste-in-gvim-on-ubuntu-work-with-ctrlx-ctrlc-ctrlv
 source $VIMRUNTIME/mswin.vim
 behave mswin
+
+" note plugin parameters 
+let g:notes_directory = '~/Dropbox/notes'
+let g:notes_suffix = '.txt'
+

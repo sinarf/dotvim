@@ -4,3 +4,6 @@
 [submodule "bundle/vim-colors-solirized"]
 	path = bundle/vim-colors-solirized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-notes"]
+	path = bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
