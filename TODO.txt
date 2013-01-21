@@ -1,7 +1,0 @@
-DONE Install pathogen or vundle 
-DONE install sensible plugin. 
-TODO Install note plugin; 
-TODO replace the PutVimrcFilesInHome.groovy script by a Python script because it is more widely used, availlable,...
-TODO configure line bubbling  
-TODO install the groovy plugin. 
-TODO install a XML plugin. 
