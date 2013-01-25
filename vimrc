@@ -23,3 +23,15 @@ let g:notes_suffix = '.txt'
 
 set hidden
 
+" make mswin like copy paste source : http://superuser.com/questions/10588/how-to-make-cut-copy-paste-in-gvim-on-ubuntu-work-with-ctrlx-ctrlc-ctrlv
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+
+"##############################################################################
+" FUNCTIONS: 
+"##############################################################################
+"
+" XML tools 
+" TODO make this active only for x* files
+map <F8> <ESC>:silent %!xmllint --format -<CR>
