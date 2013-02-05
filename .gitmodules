@@ -1,18 +1,24 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+	ignore = dirty
 [submodule "bundle/vim-colors-solirized"]
 	path = bundle/vim-colors-solirized
 	url = https://github.com/altercation/vim-colors-solarized.git
+	ignore = dirty
 [submodule "bundle/vim-notes"]
 	path = bundle/vim-notes
 	url = https://github.com/xolox/vim-notes.git
+	ignore = dirty
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+	ignore = dirty
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/sontek/minibufexpl.vim.git
+	ignore = dirty
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = https://github.com/sukima/xmledit.git
+	ignore = dirty
