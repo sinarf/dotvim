@@ -3,8 +3,9 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" change the leader key 
+" change the leader keys 
 let mapleader = ","
+let maplocalleader = ";"
 
 " Enable pathogen
 call pathogen#runtime_append_all_bundles()
@@ -30,6 +31,14 @@ set hidden
 set ignorecase
 set smartcase
 
+" Variable setup
+if has('win32') || has ('win64')
+    let $VIMHOME = $HOME."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+
+
 "##############################################################################
 " FUNCTIONS: 
 "##############################################################################
@@ -37,3 +46,12 @@ set smartcase
 " XML tools 
 " TODO make this active only for x* files
 map <F8> <ESC>:silent %!xmllint --format -<CR>
+
+
+"##############################################################################
+" MAPPING: 
+"##############################################################################
+"easy edit of vim config file
+nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
+nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
+
