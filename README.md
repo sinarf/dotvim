@@ -12,11 +12,17 @@ cd ~ && git clone git@github.com:sinarf/dotvim.git .vim && ln -sf .vim/vimrc .vi
 mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
 
-## On Windows  (needs groovy installed).
+## On Windows  
+
 ```shell
 cd %USERDIR% 
 git clone https://github.com/sinarf/dotvim.git vimfiles && cd vimfiles  && git submodule init && git submodule update
-PutVimrcFilesInHome.groovy
 mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
+Making the links under windows, *You need to run this as an administrator (use the runas functionnality)*
 
+```
+cd %USERDIR%
+mklink /H .vimrc vimfiles\vimrc
+mklink /H .gvimrc vimfiles\gvimrc
+```
