@@ -28,6 +28,9 @@ let g:notes_suffix = '.txt'
 set hidden
 set ignorecase
 set smartcase
+set tabstop=4
+set shiftwidth=4
+set smarttab
 
 " Variable setup
 if has('win32') || has ('win64')
@@ -40,11 +43,6 @@ endif
 "##############################################################################
 " FUNCTIONS: 
 "##############################################################################
-"
-" XML tools 
-" TODO make this active only for x# files
-map <F8> <ESC>:silent %!xmllint --format -<CR>
-
 
 "##############################################################################
 " MAPPING: 
@@ -57,6 +55,11 @@ nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################
-iabbrev @me michel@blavin.fr
-iabbrev @vif michel.blavin@vif.fr
+iabbrev @@ michel@blavin.fr
+iabbrev @@@ michel.blavin@vif.fr
 iabbrev  #### ################################################################################<cr>#<cr>################################################################################
+
+"###############################################################################
+" AUTOCMD:
+"############################################################################### 
+autocmd BufWritePre *.*ml :normal gg=G
