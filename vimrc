@@ -54,3 +54,9 @@ nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
 nnoremap <leader>sv :source $VIMHOME/vimrc<CR>
 nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 
+"##############################################################################
+" ABBREVIATIONS: 
+"##############################################################################
+iabbrev @me michel@blavin.fr
+iabbrev @vif michel.blavin@vif.fr
+
