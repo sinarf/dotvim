@@ -42,7 +42,7 @@ endif
 "##############################################################################
 "
 " XML tools 
-" TODO make this active only for x* files
+" TODO make this active only for x# files
 map <F8> <ESC>:silent %!xmllint --format -<CR>
 
 
@@ -57,6 +57,6 @@ nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################
-iabbrev @me michel@blavin.fr
-iabbrev @vif michel.blavin@vif.fr
-
+iabbrev @@ michel@blavin.fr
+iabbrev @@@ michel.blavin@vif.fr
+iabbrev  #### ################################################################################<cr>#<cr>################################################################################
