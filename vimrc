@@ -51,5 +51,6 @@ map <F8> <ESC>:silent %!xmllint --format -<CR>
 "##############################################################################
 "easy edit of vim config file
 nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
+nnoremap <leader>sv :source $VIMHOME/vimrc<CR>
 nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 
