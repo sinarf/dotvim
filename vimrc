@@ -31,6 +31,8 @@ set smartcase
 set tabstop=4
 set shiftwidth=4
 set smarttab
+set ff=unix
+set ffs=unix,dos
 
 " Variable setup
 if has('win32') || has ('win64')
@@ -52,8 +54,6 @@ if isdirectory(expand(s:dir))
     let &undodir = expand(s:dir) . '/undo//,' . &undodir
   endif
 endif
-
-
 
 "##############################################################################
 " FUNCTIONS: 
