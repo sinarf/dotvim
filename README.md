@@ -8,7 +8,7 @@ You should know that I change my settings like crazy and I break my installation
 * On Linux 
 ```shell
 cd ~ && git clone git@github.com:sinarf/dotvim.git .vim && ln -sf .vim/vimrc .vimrc && ln -sf .vim/gvimrc .gvimrc && cd .vim && git submodule init && git submodule update
-mkdir -p ~/.local/share/vim/{swap,backup,undo}.
+mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
 
 * On Windows  (needs groovy installed).
@@ -16,5 +16,5 @@ mkdir -p ~/.local/share/vim/{swap,backup,undo}.
 cd %USERDIR% 
 git clone https://github.com/sinarf/dotvim.git vimfiles && cd vimfiles  && git submodule init && git submodule update
 PutVimrcFilesInHome.groovy
-mkdir -p ../Application\ Data\Vim\{swap,backup,undo}
+mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
