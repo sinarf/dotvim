@@ -1,6 +1,7 @@
-This is my dot vim configuration. To use this on a new PC. 
+This is my dot vim configuration.
+========
 
-You should know that I change my settings like crazy and I break my installation very often. 
+_You should know that I change my settings like crazy and I break my installation very often._
 
 * Prerequisites : 
 	* vim should have been built with python support (needed for some plugins).
@@ -18,3 +19,4 @@ git clone https://github.com/sinarf/dotvim.git vimfiles && cd vimfiles  && git s
 PutVimrcFilesInHome.groovy
 mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
+
