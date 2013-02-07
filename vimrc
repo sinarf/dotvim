@@ -24,8 +24,6 @@ source ~/Dropbox/config/vim/secretsauce.vim
 " note plugin parameters 
 let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
-" Disable title sync, since it seems to be broken under windows
-let g:notes_title_sync='no'
 
 set hidden
 set ignorecase
