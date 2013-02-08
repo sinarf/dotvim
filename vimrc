@@ -36,23 +36,23 @@ set ffs=unix,dos
 
 " Variable setup
 if has('win32') || has ('win64')
-    let $VIMHOME = $HOME."/vimfiles"
+	let $VIMHOME = $HOME."/vimfiles"
 else
-    let $VIMHOME = $HOME."/.vim"
+	let $VIMHOME = $HOME."/.vim"
 endif
 
 " set the vim directories, shamelessly stolen from sensible plugin.  
 let s:dir = '~/.local/share/vim'
 if isdirectory(expand(s:dir))
-  if &directory =~# '^\.,'
-    let &directory = expand(s:dir) . '/swap//,' . &directory
-  endif
-  if &backupdir =~# '^\.,'
-    let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
-  endif
-  if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-    let &undodir = expand(s:dir) . '/undo//,' . &undodir
-  endif
+	if &directory =~# '^\.,'
+		let &directory = expand(s:dir) . '/swap//,' . &directory
+	endif
+	if &backupdir =~# '^\.,'
+		let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+	endif
+	if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+		let &undodir = expand(s:dir) . '/undo//,' . &undodir
+	endif
 endif
 
 "##############################################################################
@@ -77,8 +77,15 @@ iabbrev  #### ##################################################################
 "###############################################################################
 " AUTOCMD:
 "############################################################################### 
-autocmd BufWritePre *.*ml :normal gg=G
-
+" format the xml html and so on before writing it to the disk
+augroup bufWritePre
+	autocmd!
+	autocmd BufWritePre *.xml,*.html,*.xsl,*.wsdl :normal gg=G
+augroup END
+augroup filetype_xml
+	autocmd!
+	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
+augroup END
 "################################################################################
 " PLUGIN CONFIGURATION: 
 "################################################################################ 
