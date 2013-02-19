@@ -33,6 +33,10 @@ set shiftwidth=4
 set smarttab
 set ff=unix
 set ffs=unix,dos
+set encoding=utf-8 
+set fileencoding=utf-8
+set number
+
 
 " Variable setup
 if has('win32') || has ('win64')
