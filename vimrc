@@ -22,7 +22,6 @@ behave mswin
 source ~/Dropbox/config/vim/secretsauce.vim
 
 " note plugin parameters 
-let g:notes_directory = '~/Dropbox/notes'
 let g:notes_suffix = '.txt'
 
 set hidden
@@ -41,8 +40,10 @@ set number
 " Variable setup
 if has('win32') || has ('win64')
 	let $VIMHOME = $HOME."/vimfiles"
+	let g:notes_directory = '~\\Dropbox\\notes\\'
 else
 	let $VIMHOME = $HOME."/.vim"
+	let g:notes_directory = '~/Dropbox/notes/'
 endif
 
 " set the vim directories, shamelessly stolen from sensible plugin.  
