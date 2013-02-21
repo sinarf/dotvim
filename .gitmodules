@@ -26,3 +26,7 @@
 	path = bundle/simplenote
 	url = https://github.com/mrtazz/simplenote.vim.git
 	ignore = dirty
+[submodule "bundle/todo.txt-vim"]
+	path = bundle/todo.txt-vim
+	url = https://github.com/davidoc/todo.txt-vim.git
+	ignore = dirty
