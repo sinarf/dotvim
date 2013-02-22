@@ -96,8 +96,25 @@ augroup filetype_todotxt
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoDone<CR>
 augroup END
+augroup filetype_git
+	autocmd!
+	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
+augroup END
+
 "################################################################################
 " PLUGIN CONFIGURATION: 
 "################################################################################ 
+" Simplenote
 let g:SimplenoteFiletype="markdown"
+"powerline 
 set rtp+=$VIMHOME/bundle/powerline/powerline/bindings/vim
+set laststatus=2
+
+"################################################################################
+" PLUGIN CONFIGURATION: 
+"################################################################################ 
+" Simplenote
+let g:SimplenoteFiletype="markdown"
+"powerline 
+set rtp+=$VIMHOME/bundle/powerline/powerline/bindings/vim
+"set laststatus=2
