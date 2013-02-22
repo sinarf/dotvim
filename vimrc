@@ -91,7 +91,7 @@ augroup filetype_xml
 	autocmd!
 	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
 augroup END
-augroup filetype_xml
+augroup filetype_todotxt
 	autocmd!
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoDone<CR>
