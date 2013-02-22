@@ -100,3 +100,4 @@ augroup END
 " PLUGIN CONFIGURATION: 
 "################################################################################ 
 let g:SimplenoteFiletype="markdown"
+set rtp+=$VIMHOME/bundle/powerline/powerline/bindings/vim
