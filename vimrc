@@ -68,9 +68,9 @@ endif
 " MAPPING: 
 "##############################################################################
 "easy edit of vim config file
-nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
-nnoremap <leader>sv :source $VIMHOME/vimrc<CR>
-nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
+nnoremap <leader>ev :e $HOME/.vimrc<CR>
+nnoremap <leader>sv :source $HOME/.vimrc<CR>
+nnoremap <leader>egv :e $HOME/.gvimrc<CR>
 nnoremap <leader>tx :set filetype=xml<CR>
 
 " Simplenote mapping 
@@ -92,7 +92,7 @@ augroup bufWritePre
 augroup END
 augroup filetype_xml
 	autocmd!
-	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
+	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G<ESC><C-o>
 augroup END
 augroup filetype_todotxt
 	autocmd!
