@@ -71,7 +71,10 @@ endif
 nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
 nnoremap <leader>sv :source $VIMHOME/vimrc<CR>
 nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
+nnoremap <leader>tx :set filetype=xml<CR>
 
+" Simplenote mapping 
+nnoremap <leader>sl :Simplenote -l<CR> 
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################
@@ -94,11 +97,12 @@ augroup END
 augroup filetype_todotxt
 	autocmd!
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
-	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoDone<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
 augroup END
-augroup filetype_git
+augroup filetype_notes
 	autocmd!
-	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
+	autocmd FileType notes nnoremap <buffer> <localleader>d :s/TODO/DONE/
+	autocmd FileType notes nnoremap <buffer> <localleader>d :s/DONE/TODO/
 augroup END
 
 "################################################################################
@@ -115,6 +119,3 @@ set laststatus=2
 "################################################################################ 
 " Simplenote
 let g:SimplenoteFiletype="markdown"
-"powerline 
-set rtp+=$VIMHOME/bundle/powerline/powerline/bindings/vim
-"set laststatus=2
