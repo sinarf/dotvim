@@ -2,7 +2,6 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
 " change the leader keys 
 let mapleader = ","
 let maplocalleader = ";"
@@ -10,6 +9,7 @@ let maplocalleader = ";"
 " Enable pathogen
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
 
 syntax on
 filetype plugin indent on
@@ -119,3 +119,11 @@ set laststatus=2
 "################################################################################ 
 " Simplenote
 let g:SimplenoteFiletype="markdown"
+" unimpaired - Line bubbling. using the same shortcut as in eclipse. 
+" Bubble single lines
+nmap <A-Up> [e
+nmap <A-Down> ]e
+" Bubble multiple lines
+vmap <A-Up> [egv
+vmap <A-Down> ]egv
+
