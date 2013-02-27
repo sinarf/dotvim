@@ -71,7 +71,9 @@ endif
 nnoremap <leader>ev :e $HOME/.vimrc<CR>
 nnoremap <leader>sv :source $HOME/.vimrc<CR>
 nnoremap <leader>egv :e $HOME/.gvimrc<CR>
+" swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
+nnoremap <leader>tm :set filetype=markdown<CR>
 
 " Simplenote mapping 
 nnoremap <leader>sl :Simplenote -l<CR> 
@@ -92,7 +94,7 @@ augroup bufWritePre
 augroup END
 augroup filetype_xml
 	autocmd!
-	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G<ESC><C-o>
+	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
 augroup END
 augroup filetype_todotxt
 	autocmd!
@@ -102,7 +104,11 @@ augroup END
 augroup filetype_notes
 	autocmd!
 	autocmd FileType notes nnoremap <buffer> <localleader>d :s/TODO/DONE/
-	autocmd FileType notes nnoremap <buffer> <localleader>d :s/DONE/TODO/
+	autocmd FileType notes nnoremap <buffer> <localleader>u :s/DONE/TODO/
+augroup END
+augroup filetype_markdown 
+	autocmd!
+	autocmd BufNewFile,BufRead *.md set filetype=markdown
 augroup END
 
 "################################################################################
@@ -110,15 +116,7 @@ augroup END
 "################################################################################ 
 " Simplenote
 let g:SimplenoteFiletype="markdown"
-"powerline 
-set rtp+=$VIMHOME/bundle/powerline/powerline/bindings/vim
-set laststatus=2
 
-"################################################################################
-" PLUGIN CONFIGURATION: 
-"################################################################################ 
-" Simplenote
-let g:SimplenoteFiletype="markdown"
 " unimpaired - Line bubbling. using the same shortcut as in eclipse. 
 " Bubble single lines
 nmap <A-Up> [e
