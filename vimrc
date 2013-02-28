@@ -69,12 +69,14 @@ endif
 " MAPPING: 
 "##############################################################################
 "easy edit of vim config file
-nnoremap <leader>ev :e $VIMHOME/.vimrc<CR>
+nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
 nnoremap <leader>sv :source $HOME/.vimrc<CR>
-nnoremap <leader>egv :e $VIMHOME/.gvimrc<CR>
+nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 " swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
 nnoremap <leader>tm :set filetype=markdown<CR>
+" insert today timestamp	
+nnoremap <leader>dt "=strftime("%Y-%m-%d")<CR>P
 
 " Simplenote mapping 
 nnoremap <leader>sl :Simplenote -l<CR> 
