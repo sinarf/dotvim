@@ -40,8 +40,13 @@ set number
 
 " Variable setup
 if has('win32') || has ('win64')
+	" Windows workarounds: until my work machine is under linux.
 	let $VIMHOME = $HOME."/vimfiles"
 	let g:notes_directory = '~\\Dropbox\\notes\\'
+	" use cygwin as shell 
+	set shell=C:\Cygwin\bin\bash.exe\ -login
+	set shellcmdflag=-c
+	set shellquote=\"
 else
 	let $VIMHOME = $HOME."/.vim"
 	let g:notes_directory = '~/Dropbox/notes/'
@@ -124,11 +129,19 @@ augroup END
 " Simplenote
 let g:SimplenoteFiletype="markdown"
 
-" unimpaired - Line bubbling. using the same shortcut as in eclipse. 
+" unimpaired - Line bubbling.
+" using the same shortcut as in eclipse. 
 " Bubble single lines
 nmap <A-Up> [e
 nmap <A-Down> ]e
 " Bubble multiple lines
 vmap <A-Up> [egv
 vmap <A-Down> ]egv
+" Same but "à la vim" ...
+" Bubble single lines
+nmap <A-k> [e
+nmap <A-j> ]e
+" Bubble multiple lines
+vmap <A-k> [egv
+vmap <A-j> ]egv
 
