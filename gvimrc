@@ -9,11 +9,12 @@ endif
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
 " ------------------------------------------------------------------
+colorscheme desert
+"colorscheme solarized
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_contrast="high"    "default value is normal
 syntax enable
 set background=dark
-colorscheme solarized
 " ------------------------------------------------------------------
 
 " The following items are available options, but do not need to be
