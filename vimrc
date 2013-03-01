@@ -110,8 +110,17 @@ augroup filetype_xml
 augroup END
 augroup filetype_todotxt
 	autocmd!
-	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
-	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>td :TodoDone<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>tc :TodoCancelled<CR>
+	"prioritize 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pa ^i(A)<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pb ^i(B)<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pc ^i(C)<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pd ^i(D)<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pe ^i(E)<ESC> 
+	" context
+	autocmd FileType todotxt nnoremap <buffer> <localleader>ch $a @home<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>cw $a @work<ESC> 
 augroup END
 augroup filetype_notes
 	autocmd!
