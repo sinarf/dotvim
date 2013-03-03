@@ -85,7 +85,7 @@ nnoremap <leader>tm :set filetype=markdown<CR>
 " insert today timestamp	
 nnoremap <leader>dt "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
-nnoremap <leader>rt	:! %
+nnoremap <leader>rt	:! %<CR>
 
 " Simplenote mapping 
 nnoremap <leader>sl :Simplenote -l<CR> 
