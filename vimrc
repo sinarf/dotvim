@@ -36,7 +36,9 @@ set ffs=unix,dos
 set encoding=utf-8 
 set fileencoding=utf-8
 set number
-
+" wrapping not cutting words in the middle: source : http://stackoverflow.com/questions/744159/word-wrap-in-gvim 
+set formatoptions=l
+set lbr
 
 " Variable setup
 if has('win32') || has ('win64')
