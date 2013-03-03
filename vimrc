@@ -84,6 +84,8 @@ nnoremap <leader>tx :set filetype=xml<CR>
 nnoremap <leader>tm :set filetype=markdown<CR>
 " insert today timestamp	
 nnoremap <leader>dt "=strftime("%Y-%m-%d")<CR>P
+" running the current script 
+nnoremap <leader>rt	:! %
 
 " Simplenote mapping 
 nnoremap <leader>sl :Simplenote -l<CR> 
@@ -164,3 +166,6 @@ let g:Powerline_symbols = 'fancy'
 " Notes 
 nnoremap <leader>nn :Note 
 nnoremap <leader>ns :SearchNotes  
+
+" vim wiki
+let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]

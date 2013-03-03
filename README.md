@@ -11,6 +11,7 @@ This is my dot vim configuration.
 cd ~ && git clone git@github.com:sinarf/dotvim.git .vim && ln -sf .vim/vimrc .vimrc && ln -sf .vim/gvimrc .gvimrc && cd .vim && git submodule init && git submodule update
 mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
+Or you can use the provided shell script. 
 
 ## On Windows  
 
