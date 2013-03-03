@@ -156,3 +156,6 @@ nmap <A-j> ]e
 vmap <A-k> [egv
 vmap <A-j> ]egv
 
+" Powerline
+set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
+set laststatus=2
