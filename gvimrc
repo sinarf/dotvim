@@ -3,7 +3,7 @@
 if has('win32') || has('win64')
 	set guifont=Consolas:h11
 elseif has('unix')
-	set guifont=Ubuntu\ Mono\ 14
+	set guifont=Ubuntu\ Mono\ 12
 endif
 " colors I like
 " ------------------------------------------------------------------

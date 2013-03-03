@@ -156,6 +156,11 @@ nmap <A-j> ]e
 vmap <A-k> [egv
 vmap <A-j> ]egv
 
-" Powerline
+" Powerline. Installed patched ubuntu font from https://github.com/pdf/ubuntu-mono-powerline-ttf
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
 set laststatus=2
+let g:Powerline_symbols = 'fancy'
+
+" Notes 
+nnoremap <leader>nn :Note 
+nnoremap <leader>ns :SearchNotes  
