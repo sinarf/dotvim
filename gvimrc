@@ -6,15 +6,16 @@ elseif has('unix')
 	set guifont=Ubuntu\ Mono\ 12
 endif
 " colors I like
+"colorscheme desert
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
 " ------------------------------------------------------------------
-colorscheme desert
-"colorscheme solarized
+colorscheme solarized
+set background=dark
+"set background=light
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_contrast="high"    "default value is normal
 syntax enable
-set background=dark
 " ------------------------------------------------------------------
 
 " The following items are available options, but do not need to be
@@ -28,6 +29,7 @@ set background=dark
 " let g:solarized_diffmode="normal"
 " let g:solarized_hitrail=0
 " let g:solarized_menu=1
+
 " Size of GVim window
 set lines=50 columns=120
 " Don't display the menu or toolbar. Just the screen.

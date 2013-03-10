@@ -10,7 +10,8 @@ let maplocalleader = ";"
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-colorscheme desert
+colorscheme solarized
+set background=dark
 
 syntax on
 filetype plugin indent on
