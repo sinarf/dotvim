@@ -23,9 +23,6 @@ behave mswin
 " some stuff are not publicly availlable
 source ~/Dropbox/config/vim/secretsauce.vim
 
-" note plugin parameters 
-let g:notes_suffix = '.txt'
-
 set hidden
 set ignorecase
 set smartcase
@@ -45,14 +42,13 @@ set lbr
 if has('win32') || has ('win64')
 	" Windows workarounds: until my work machine is under linux.
 	let $VIMHOME = $HOME."/vimfiles"
-	let g:notes_directory = '~\\Dropbox\\notes\\'
 	" use cygwin as shell 
-	set shell=C:\Cygwin\bin\bash.exe\ -login
+	"  mbl - disable the use of cygwin. 
+	set shell=C:\uwin\bin\bash.exe\ -login
 	set shellcmdflag=-c
 	set shellquote=\"
 else
 	let $VIMHOME = $HOME."/.vim"
-	let g:notes_directory = '~/Dropbox/notes/'
 endif
 
 " set the vim directories, shamelessly stolen from sensible plugin.  
@@ -87,6 +83,8 @@ nnoremap <leader>tm :set filetype=markdown<CR>
 nnoremap <leader>dt "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
+nnoremap <tab> >>
+nnoremap <S-tab> << 
 
 " Simplenote mapping 
 nnoremap <leader>sl :Simplenote -l<CR> 
@@ -140,8 +138,6 @@ augroup END
 "################################################################################
 " PLUGIN CONFIGURATION: 
 "################################################################################ 
-" Simplenote
-let g:SimplenoteFiletype="markdown"
 
 " unimpaired - Line bubbling.
 " using the same shortcut as in eclipse. 
@@ -163,10 +159,6 @@ vmap <A-j> ]egv
 set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
-
-" Notes 
-nnoremap <leader>nn :Note 
-nnoremap <leader>ns :SearchNotes  
 
 " vim wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
