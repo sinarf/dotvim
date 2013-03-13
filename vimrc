@@ -125,11 +125,6 @@ augroup filetype_todotxt
 	autocmd FileType todotxt nnoremap <buffer> <localleader>ch $a @home<ESC> 
 	autocmd FileType todotxt nnoremap <buffer> <localleader>cw $a @work<ESC> 
 augroup END
-augroup filetype_notes
-	autocmd!
-	autocmd FileType notes nnoremap <buffer> <localleader>d :s/TODO/DONE/
-	autocmd FileType notes nnoremap <buffer> <localleader>u :s/DONE/TODO/
-augroup END
 augroup filetype_markdown 
 	autocmd!
 	autocmd BufNewFile,BufRead *.md set filetype=markdown
