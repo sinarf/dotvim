@@ -34,6 +34,7 @@ set ffs=unix,dos
 set encoding=utf-8 
 set fileencoding=utf-8
 set number
+set foldenable  
 " wrapping not cutting words in the middle: source : http://stackoverflow.com/questions/744159/word-wrap-in-gvim 
 set formatoptions=l
 set lbr
@@ -79,8 +80,10 @@ nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 " swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
 nnoremap <leader>tm :set filetype=markdown<CR>
-" insert today timestamp	
+" insert today date	
 nnoremap <leader>dt "=strftime("%Y-%m-%d")<CR>P
+nnoremap <leader>df "=strftime("%A %d %B %Y")<CR>P
+nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
 nnoremap <tab> >>
@@ -129,6 +132,11 @@ augroup filetype_markdown
 	autocmd!
 	autocmd BufNewFile,BufRead *.md set filetype=markdown
 augroup END
+augroup filetype_vimwiki 
+	autocmd!
+	autocmd FileType vimwiki nnoremap <buffer> <localleader>td a [ ] <ESC>
+	"autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks<CR> 
+augroup END
 
 "################################################################################
 " PLUGIN CONFIGURATION: 
@@ -157,3 +165,18 @@ let g:Powerline_symbols = 'fancy'
 
 " vim wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
+let g:vimwiki_folding = 2
+
+if has('statusline')
+        set laststatus=2
+
+        " Broken down into easily includeable segments
+        set statusline=%<%f\   " Filename
+        set statusline+=%w%h%m%r " Options
+        set statusline+=%{fugitive#statusline()} "  Git Hotness
+        set statusline+=\ [%{&ff}/%Y]            " filetype
+        set statusline+=\ [%{getcwd()}]          " current dir
+        "set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
+
