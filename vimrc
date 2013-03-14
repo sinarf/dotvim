@@ -86,11 +86,7 @@ nnoremap <leader>df "=strftime("%A %d %B %Y")<CR>P
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
-nnoremap <tab> >>
-nnoremap <S-tab> << 
 
-" Simplenote mapping 
-nnoremap <leader>sl :Simplenote -l<CR> 
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################
