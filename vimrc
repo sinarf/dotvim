@@ -112,6 +112,7 @@ augroup filetype_xml
 augroup END
 augroup filetype_todotxt
 	autocmd!
+	autocmd BufEnter todo.txt :set ft=todotxt
 	autocmd FileType todotxt nnoremap <buffer> <localleader>td :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>tc :TodoCancelled<CR>
 	"prioritize 
@@ -130,10 +131,37 @@ augroup filetype_markdown
 augroup END
 augroup filetype_vimwiki 
 	autocmd!
-	autocmd FileType vimwiki nnoremap <buffer> <localleader>td a [ ] <ESC>
+	autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
 	" make the file directory to be the current directory
     autocmd BufEnter *.wiki silent! lcd %:p:h 
-	"autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks<CR> 
+    autocmd BufWritePost *.wiki :VimwikiAll2HTML
+	autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks
+augroup END
+nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
+" running the current script 
+nnoremap <leader>rt	:! %<CR>
+
+"##############################################################################
+" ABBREVIATIONS: 
+"##############################################################################
+iabbrev @@ michel@blavin.fr
+iabbrev @@@ michel.blavin@vif.fr
+iabbrev  #### ################################################################################<cr>#<cr>################################################################################
+
+"################################################################################
+"# COMMANDS
+"################################################################################
+:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
+"###############################################################################
+" AUTOCMD:
+"############################################################################### 
+" format the xml html and so on before writing it to the disk
+augroup bufWritePre
+	autocmd!
+	autocmd BufWritePre *.xml,*.html,*.xsl,*.wsdl :normal gg=G
+augroup END
+augroup filetype_xml
+	autocmd!
 augroup END
 
 "################################################################################
@@ -166,15 +194,14 @@ let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
 let g:vimwiki_folding = 2
 
 if has('statusline')
-        set laststatus=2
-
-        " Broken down into easily includeable segments
-        set statusline=%<%f\   " Filename
-        set statusline+=%w%h%m%r " Options
-        set statusline+=%{fugitive#statusline()} "  Git Hotness
-        set statusline+=\ [%{&ff}/%Y]            " filetype
-        set statusline+=\ [%{getcwd()}]          " current dir
-        "set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
-        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+	set laststatus=2
+	" Broken down into easily includeable segmentd
+	set statusline=%<%f\   " Filename
+	set statusline+=%w%h%m%r " Options
+	set statusline+=%{fugitive#statusline()} "  Git Hotness
+	set statusline+=\ [%{&ff}/%Y]            " filetype
+	set statusline+=\ [%{getcwd()}]          " current dir
+	"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
 
