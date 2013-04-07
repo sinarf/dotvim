@@ -1,7 +1,8 @@
 
 " Font. Very important.
 if has('win32') || has('win64')
-	set guifont=Consolas:h11
+	"set guifont=Consolas:h11
+	set guifont=Monaco:h8
 elseif has('unix')
 	set guifont=Ubuntu\ Mono\ 13
 endif
