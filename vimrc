@@ -138,6 +138,12 @@ augroup filetype_vimwiki
     autocmd BufWritePost *.wiki :VimwikiAll2HTML
 	autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks
 augroup END
+
+augroup filetype_gitcommit 
+	autocmd!
+	autocmd Filetype gitcommit setlocal spell textwidth=72
+augroup END
+
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
