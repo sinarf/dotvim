@@ -206,3 +206,5 @@ if has('statusline')
 	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
 
+" Easy motion plugin 
+let g:EasyMotion_leader_key = '<Leader>'
