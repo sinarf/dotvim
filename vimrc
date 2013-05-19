@@ -71,6 +71,7 @@ endif
 " FUNCTIONS: 
 "##############################################################################
 
+
 "##############################################################################
 " MAPPING: 
 "##############################################################################
@@ -134,9 +135,9 @@ augroup filetype_vimwiki
 	autocmd!
 	autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
 	" make the file directory to be the current directory
-    autocmd BufEnter *.wiki silent! lcd %:p:h 
-    autocmd BufWritePost *.wiki :VimwikiAll2HTML
-	autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks
+	autocmd BufEnter *.wiki silent! lcd %:p:h 
+	"autocmd BufWritePost *.wiki :VimwikiAll2HTML
+	"autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks
 augroup END
 
 augroup filetype_gitcommit 
