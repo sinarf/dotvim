@@ -145,6 +145,11 @@ augroup filetype_gitcommit
 	autocmd Filetype gitcommit setlocal spell textwidth=72
 augroup END
 
+augroup filetype_groovy
+	autocmd!
+	au BufNewFile,BufRead *.gradle setf groovy
+augroup END
+
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
