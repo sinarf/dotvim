@@ -150,6 +150,14 @@ augroup filetype_groovy
 	au BufNewFile,BufRead *.gradle setf groovy
 augroup END
 
+augroup filetype_dosbatch
+	autocmd!
+	" use cmd as shell instead of cygwin -- won't work on non windows, but
+	" who would be crazy enoough to develop dosbatch script if your are not
+	" under windows. 
+	autocmd FileType dosbatch :set shell=cmd 
+augroup END
+
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
