@@ -89,6 +89,10 @@ nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
 
+" NERDTree 
+map <F2> <Esc>:NERDTreeToggle<CR> "Toggle the file browser
+map <A-F1> <Esc>:NERDTreeFind<CR> "Find the current file in the file browser
+
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################
