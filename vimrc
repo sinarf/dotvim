@@ -232,3 +232,7 @@ endif
 
 " Easy motion plugin 
 let g:EasyMotion_leader_key = '<Leader>'
+
+" added for groovy taglists source : www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/ 
+let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;' . 'f:function;v:variables'
+
