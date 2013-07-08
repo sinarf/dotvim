@@ -141,7 +141,7 @@ augroup filetype_vimwiki
 	" make the file directory to be the current directory
 	autocmd BufEnter *.wiki silent! lcd %:p:h 
 	"autocmd BufWritePost *.wiki :VimwikiAll2HTML
-	"autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks
+	autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks
 augroup END
 
 augroup filetype_gitcommit 

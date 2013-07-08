@@ -46,3 +46,7 @@
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
 	ignore = all
+[submodule "bundle/vim-colorscheme"]
+	path = bundle/vim-colorscheme
+	url = https://github.com/flazz/vim-colorschemes
+	ignore = all
