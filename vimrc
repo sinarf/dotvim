@@ -10,7 +10,7 @@ let maplocalleader = ";"
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-colorscheme solarized
+colorscheme developer
 "colorscheme vividchalk
 set background=dark
 
@@ -138,6 +138,7 @@ augroup END
 augroup filetype_vimwiki 
 	autocmd!
 	autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
+	autocmd FileType vimwiki nnoremap <leader>wf :VWS 
 	" make the file directory to be the current directory
 	autocmd BufEnter *.wiki silent! lcd %:p:h 
 	"autocmd BufWritePost *.wiki :VimwikiAll2HTML
