@@ -142,7 +142,7 @@ augroup filetype_vimwiki
 	" make the file directory to be the current directory
 	autocmd BufEnter *.wiki silent! lcd %:p:h 
 	"autocmd BufWritePost *.wiki :VimwikiAll2HTML
-	autocmd BufRead diary.wiki :VimwikiDiaryGenerateLinks
+	autocmd BufRead,BufWritePre diary.wiki :VimwikiDiaryGenerateLinks
 augroup END
 
 augroup filetype_gitcommit 
@@ -211,7 +211,7 @@ vmap <A-k> [egv
 vmap <A-j> ]egv
 
 " Powerline. Installed patched ubuntu font from https://github.com/pdf/ubuntu-mono-powerline-ttf
-set rtp+=/usr/local/lib/python2.7/dist-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim/
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
