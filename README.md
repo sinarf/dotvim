@@ -17,7 +17,7 @@ Or you can use the provided shell script.
 
 ```shell
 cd %USERDIR% 
-git clone https://github.com/sinarf/dotvim.git vimfiles && cd vimfiles  && git submodule init && git submodule update
+git clone git@github.com:sinarf/dotvim.git vimfiles && cd vimfiles  && git submodule init && git submodule update
 mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
 Making the links under windows : (doesn't work with cygwin, you should run this in windows console). 
