@@ -50,3 +50,7 @@
 	path = bundle/vim-colorscheme
 	url = https://github.com/flazz/vim-colorschemes
 	ignore = all
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+	ignore = all

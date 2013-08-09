@@ -46,7 +46,7 @@ if has('win32') || has ('win64')
 	let $VIMHOME = $HOME."/vimfiles"
 	" use cygwin as shell 
 	"  mbl - disable the use of cygwin. 
-	set shell=C:\uwin\bin\bash.exe\ -login
+	set shell=C:\cygwin\bin\bash.exe\ -login
 	set shellcmdflag=-c
 	set shellquote=\"
 else
