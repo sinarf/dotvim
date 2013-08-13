@@ -54,3 +54,7 @@
 	path = bundle/unite
 	url = https://github.com/Shougo/unite.vim.git
 	ignore = all
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+	ignore = all

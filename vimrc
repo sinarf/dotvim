@@ -210,10 +210,7 @@ nmap <A-j> ]e
 vmap <A-k> [egv
 vmap <A-j> ]egv
 
-" Powerline. Installed patched ubuntu font from https://github.com/pdf/ubuntu-mono-powerline-ttf
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
 
 " vim wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
