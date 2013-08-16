@@ -2,19 +2,7 @@
 "##############################################################################
 " FUNCTIONS: 
 "##############################################################################
-function! Browser ()
-	let line0 = getline (".")
-	let line = matchstr (line0, "http[^ ]*")
-	:if line==""
-	let line = matchstr (line0, "ftp[^ ]*")
-	:endif
-	:if line==""
-	let line = matchstr (line0, "file[^ ]*")
-	:endif
-	" echo line
-	exec ":silent !$BROWSER &".line
-endfunction
-map <F11> :call Browser()<CR>
+map <F11> :call OpenUrl()<CR>
 
 if has('win32') || has('win64')
 	set guifont=Consolas:h10
