@@ -10,7 +10,7 @@ let maplocalleader = ";"
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-colorscheme developer
+colorscheme default
 "colorscheme vividchalk
 set background=dark
 

@@ -13,8 +13,8 @@ endif
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
 " ------------------------------------------------------------------
-colorscheme candyman
-"colorscheme solarized
+"colorscheme candyman
+colorscheme solarized
 set background=dark
 "set background=light
 let g:solarized_termcolors=256    "default value is 16
