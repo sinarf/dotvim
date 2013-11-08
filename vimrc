@@ -93,6 +93,13 @@ nnoremap <leader>rt	:! %<CR>
 map <F2> <Esc>:NERDTreeToggle<CR> "Toggle the file browser
 map <A-F1> <Esc>:NERDTreeFind<CR> "Find the current file in the file browser
 
+
+nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
+" running the current script 
+nnoremap <leader>rt	:! %<CR>
+
+" indent file 
+nnoremap <leader>i	gg=G
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################
@@ -107,11 +114,6 @@ iabbrev  #### ##################################################################
 "###############################################################################
 " AUTOCMD:
 "############################################################################### 
-" format the xml html and so on before writing it to the disk
-augroup bufWritePre
-	autocmd!
-	autocmd BufWritePre *.xml,*.html,*.xsl,*.wsdl :normal gg=G
-augroup END
 augroup filetype_xml
 	autocmd!
 	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
@@ -119,8 +121,8 @@ augroup END
 augroup filetype_todotxt
 	autocmd!
 	autocmd BufEnter todo.txt :set ft=todotxt
-	autocmd FileType todotxt nnoremap <buffer> <localleader>td :TodoDone<CR>
-	autocmd FileType todotxt nnoremap <buffer> <localleader>tc :TodoCancelled<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
 	"prioritize 
 	autocmd FileType todotxt nnoremap <buffer> <localleader>pa ^i(A) <ESC> 
 	autocmd FileType todotxt nnoremap <buffer> <localleader>pb ^i(B) <ESC> 
@@ -128,8 +130,8 @@ augroup filetype_todotxt
 	autocmd FileType todotxt nnoremap <buffer> <localleader>pd ^i(D) <ESC> 
 	autocmd FileType todotxt nnoremap <buffer> <localleader>pe ^i(E) <ESC> 
 	" context
-	autocmd FileType todotxt nnoremap <buffer> <localleader>ch $a @home<ESC> 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>cw $a @work<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>h ^i@home<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>w ^i@work<ESC> 
 augroup END
 augroup filetype_markdown 
 	autocmd!
@@ -162,11 +164,12 @@ augroup filetype_dosbatch
 	" under windows. 
 	autocmd FileType dosbatch :set shell=cmd 
 augroup END
-
-nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
-" running the current script 
-nnoremap <leader>rt	:! %<CR>
-
+augroup filetype_javascript
+	autocmd!
+	autocmd FileType javascript,json  set tabstop=2
+	autocmd FileType javascript,json  set shiftwidth=2
+	autocmd FileType javascript,json  set expandtab
+augroup END
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################

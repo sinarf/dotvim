@@ -66,3 +66,9 @@
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc
 	ignore = all
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/json"]
+	path = bundle/json
+	url = https://github.com/elzr/vim-json.git
