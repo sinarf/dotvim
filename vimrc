@@ -213,7 +213,10 @@ nmap <A-j> ]e
 vmap <A-k> [egv
 vmap <A-j> ]egv
 
-set laststatus=2
+
+" pomodoro airline :
+let g:tomato#remind = "☻" 
+let g:tomato#restinfo = "☺"
 
 " vim wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
@@ -221,14 +224,15 @@ let g:vimwiki_folding = 1
 
 if has('statusline')
 	set laststatus=2
-	" Broken down into easily includeable segmentd
-	set statusline=%<%f\   " Filename
-	set statusline+=%w%h%m%r " Options
-	set statusline+=%{fugitive#statusline()} "  Git Hotness
-	set statusline+=\ [%{&ff}/%Y]            " filetype
-	set statusline+=\ [%{getcwd()}]          " current dir
-	"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
-	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+	"" Broken down into easily includeable segmentd
+	"set statusline=%<%f\   " Filename
+	"set statusline+=%w%h%m%r " Options
+	"set statusline+=%{fugitive#statusline()} "  Git Hotness
+	"set statusline+=\ [%{&ff}/%Y]            " filetype
+	"set statusline+=\ [%{getcwd()}]          " current dir
+	""set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+	"set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+	set statusline=%k%F[%{&ff}:%{&fenc}]%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %=[%{GitBranch()}]\ %=[%l,%c,%p%%]
 endif
 
 " Easy motion plugin 

@@ -69,6 +69,16 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+	ignore = all
 [submodule "bundle/json"]
 	path = bundle/json
 	url = https://github.com/elzr/vim-json.git
+	ignore = all
+[submodule "bundle/pomicons"]
+	path = bundle/pomicons
+	url = https://github.com/gabrielelana/pomicons.git
+	ignore = all
+[submodule "bundle/vim-airline-tomato"]
+	path = bundle/vim-airline-tomato
+	url = https://github.com/Zuckonit/vim-airline-tomato.git
+	ignore = all
