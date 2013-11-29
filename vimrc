@@ -217,7 +217,7 @@ set laststatus=2
 
 " vim wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
-let g:vimwiki_folding = 2
+let g:vimwiki_folding = 1
 
 if has('statusline')
 	set laststatus=2
