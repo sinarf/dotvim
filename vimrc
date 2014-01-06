@@ -130,8 +130,11 @@ augroup filetype_todotxt
 	autocmd FileType todotxt nnoremap <buffer> <localleader>pd ^i(D) <ESC> 
 	autocmd FileType todotxt nnoremap <buffer> <localleader>pe ^i(E) <ESC> 
 	" context
-	autocmd FileType todotxt nnoremap <buffer> <localleader>h ^i@home<ESC> 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>w ^i@work<ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>ho ^i@home <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>wk ^i@work <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>wo ^i@waitingOn <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>ca ^i@call <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>on ^i@online <ESC>
 augroup END
 augroup filetype_markdown 
 	autocmd!
