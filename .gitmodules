@@ -86,3 +86,7 @@
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = all
+[submodule "bundle/calendar"]
+	path = bundle/calendar
+	url = https://github.com/itchyny/calendar.vim.git
+	ignore = all
