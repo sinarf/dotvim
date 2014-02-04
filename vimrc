@@ -100,6 +100,9 @@ nnoremap <leader>rt	:! %<CR>
 
 " indent file 
 nnoremap <leader>i	gg=G
+
+" spell checking 
+nnoremap <silent> <leader>s :set spell!<CR>
 "##############################################################################
 " ABBREVIATIONS: 
 "##############################################################################
@@ -148,6 +151,7 @@ augroup filetype_vimwiki
 	autocmd BufEnter *.wiki silent! lcd %:p:h 
 	"autocmd BufWritePost *.wiki :VimwikiAll2HTML
 	autocmd BufRead,BufWritePre diary.wiki :VimwikiDiaryGenerateLinks
+	autocmd Filetype vimwiki setlocal spell
 augroup END
 
 augroup filetype_gitcommit 
@@ -226,20 +230,20 @@ let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
 let g:vimwiki_folding = 1
 
 if has('statusline')
-  set laststatus=2
-  "" Broken down into easily includeable segmentd
-  set statusline=%<%f\   " Filename
-  set statusline+=%w%h%m%r " Options
-  set statusline+=%{fugitive#statusline()} "  Git Hotness
-  set statusline+=\ [%{&ff}/%Y]            " filetype
-  set statusline+=\ [%{getcwd()}]          " current dir
-  set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-  "set statusline=%k%F[%{&ff}:%{&fenc}]%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %=[%{GitBranch()}]\ %=[%l,%c,%p%%]
-  set statusline+=\ %=[%{GitBranch()}]
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
+	set laststatus=2
+	"" Broken down into easily includeable segmentd
+	set statusline=%<%f\   " Filename
+	set statusline+=%w%h%m%r " Options
+	set statusline+=%{fugitive#statusline()} "  Git Hotness
+	set statusline+=\ [%{&ff}/%Y]            " filetype
+	set statusline+=\ [%{getcwd()}]          " current dir
+	set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+	"set statusline=%k%F[%{&ff}:%{&fenc}]%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %=[%{GitBranch()}]\ %=[%l,%c,%p%%]
+	set statusline+=\ %=[%{GitBranch()}]
+	set statusline+=%#warningmsg#
+	set statusline+=%{SyntasticStatuslineFlag()}
+	set statusline+=%*
 endif
 
 " Easy motion plugin 
