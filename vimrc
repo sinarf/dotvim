@@ -119,7 +119,7 @@ iabbrev  #### ##################################################################
 "############################################################################### 
 augroup filetype_xml
 	autocmd!
-	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G
+	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G''
 augroup END
 augroup filetype_todotxt
 	autocmd!
@@ -176,6 +176,7 @@ augroup filetype_javascript
 	autocmd FileType javascript,json  set tabstop=2
 	autocmd FileType javascript,json  set shiftwidth=2
 	autocmd FileType javascript,json  set expandtab
+  autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
 augroup END
 "##############################################################################
 " ABBREVIATIONS: 
@@ -195,9 +196,6 @@ iabbrev  #### ##################################################################
 augroup bufWritePre
 	autocmd!
 	autocmd BufWritePre *.xml,*.html,*.xsl,*.wsdl :normal gg=G
-augroup END
-augroup filetype_xml
-	autocmd!
 augroup END
 
 "################################################################################
