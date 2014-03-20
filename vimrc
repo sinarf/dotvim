@@ -176,7 +176,7 @@ augroup filetype_javascript
 	autocmd FileType javascript,json  set tabstop=2
 	autocmd FileType javascript,json  set shiftwidth=2
 	autocmd FileType javascript,json  set expandtab
-  autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
+	autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
 augroup END
 "##############################################################################
 " ABBREVIATIONS: 
