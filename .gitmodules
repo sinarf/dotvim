@@ -86,3 +86,7 @@
 	path = bundle/calendar
 	url = https://github.com/itchyny/calendar.vim.git
 	ignore = all
+[submodule "bundle/github-issues"]
+	path = bundle/github-issues
+	url = https://github.com/jaxbot/github-issues.vim.git
+	ignore = all
