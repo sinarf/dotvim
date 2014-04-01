@@ -1,6 +1,8 @@
+" vim:fdm=marker
 " sinarf vimrc 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
+" {{{ GENERAL OPTIONS 
 set nocompatible
 " change the leader keys 
 let mapleader = ","
@@ -66,14 +68,13 @@ if isdirectory(expand(s:dir))
 		let &undodir = expand(s:dir) . '/undo//,' . &undodir
 	endif
 endif
-
+" }}}
 "##############################################################################
-" FUNCTIONS: 
+" {{{ FUNCTIONS: 
 "##############################################################################
-
-
+" }}}
 "##############################################################################
-" MAPPING: 
+" {{{ MAPPING: 
 "##############################################################################
 "easy edit of vim config file
 nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
@@ -103,15 +104,16 @@ nnoremap <leader>i	gg=G
 
 " spell checking 
 nnoremap <silent> <leader>s :set spell!<CR>
+" }}}
 "##############################################################################
-" ABBREVIATIONS: 
+" {{{ ABBREVIATIONS: 
 "##############################################################################
 iabbrev @@ michel@blavin.fr
 iabbrev @@@ michel.blavin@vif.fr
 iabbrev  #### ################################################################################<cr>#<cr>################################################################################
-
+" }}}
 "################################################################################
-"# COMMANDS
+"# {{{ COMMANDS
 "################################################################################
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
 "###############################################################################
@@ -178,28 +180,30 @@ augroup filetype_javascript
 	autocmd FileType javascript,json  set expandtab
 	autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
 augroup END
+" }}}
 "##############################################################################
-" ABBREVIATIONS: 
+" {{{ ABBREVIATIONS: 
 "##############################################################################
 iabbrev @@ michel@blavin.fr
 iabbrev @@@ michel.blavin@vif.fr
 iabbrev  #### ################################################################################<cr>#<cr>################################################################################
-
+"}}}
 "################################################################################
-"# COMMANDS
+"# {{{ COMMANDS
 "################################################################################
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
+" }}}
 "###############################################################################
-" AUTOCMD:
+" {{{ AUTOCMD:
 "############################################################################### 
 " format the xml html and so on before writing it to the disk
 augroup bufWritePre
 	autocmd!
 	autocmd BufWritePre *.xml,*.html,*.xsl,*.wsdl :normal gg=G
 augroup END
-
+" }}}
 "################################################################################
-" PLUGIN CONFIGURATION: 
+" {{{ PLUGIN CONFIGURATION: 
 "################################################################################ 
 
 " unimpaired - Line bubbling.
@@ -253,3 +257,5 @@ let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;' . 'f:f
 " Calendar 
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
+
+" }}]
