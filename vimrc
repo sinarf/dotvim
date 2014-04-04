@@ -121,11 +121,16 @@ iabbrev  #### ##################################################################
 "############################################################################### 
 augroup filetype_xml
 	autocmd!
-	autocmd FileType xml nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G''
+	autocmd FileType xml,xsd,wsdl nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G''
 augroup END
 augroup filetype_todotxt
 	autocmd!
 	autocmd BufEnter todo.txt :set ft=todotxt
+	" Google task sync need the todo.sh and google plugin
+	autocmd BufWritePost todo.txt :!todo.sh google push
+	" FIXME 
+	"autocmd BufReadPost todo.txt :!todo.sh google pull
+	" Task actions
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
 	"prioritize 
@@ -140,6 +145,9 @@ augroup filetype_todotxt
 	autocmd FileType todotxt nnoremap <buffer> <localleader>wo ^i@waitingOn <ESC>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>ca ^i@call <ESC>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>on ^i@online <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>gl..:!todo.sh google pull<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>gp..:!todo.sh google push<CR>
+augroup END
 augroup END
 augroup filetype_markdown 
 	autocmd!
