@@ -104,6 +104,8 @@ nnoremap <leader>i	gg=G
 
 " spell checking 
 nnoremap <silent> <leader>s :set spell!<CR>
+
+nnoremap <leader>m :MRU<CR>
 " }}}
 "##############################################################################
 " {{{ ABBREVIATIONS: 
@@ -130,8 +132,8 @@ augroup filetype_todotxt
 	autocmd BufWritePost todo.txt :!todo.sh google push
 	" FIXME 
 	"autocmd BufReadPost todo.txt :!todo.sh google pull
-	autocmd FileType todotxt nnoremap <buffer> <localleader>gl..:!todo.sh google pull<CR>
-	autocmd FileType todotxt nnoremap <buffer> <localleader>gp..:!todo.sh google push<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>gl :!todo.sh google pull<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>gp :!todo.sh google push<CR>
 	" Task actions
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
