@@ -8,7 +8,7 @@
 	ignore = all
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
-	url = https://github.com/sontek/minibufexpl.vim.git
+	url = https://github.com/fholgado/minibufexpl.vim.git
 	ignore = all
 [submodule "bundle/powerline"]
 	path = bundle/powerline
