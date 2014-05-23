@@ -162,9 +162,9 @@ augroup filetype_vimwiki
 	autocmd FileType vimwiki nnoremap <leader>wf :VWS 
 	" make the file directory to be the current directory
 	autocmd BufEnter *.wiki silent! lcd %:p:h 
-	"autocmd BufWritePost *.wiki :VimwikiAll2HTML
 	autocmd BufRead,BufWritePre diary.wiki :VimwikiDiaryGenerateLinks
 	autocmd Filetype vimwiki setlocal spell
+	autocmd BufWritePost *.wiki :Vimwiki2HTML
 augroup END
 
 augroup filetype_gitcommit 
