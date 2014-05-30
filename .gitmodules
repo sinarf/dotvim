@@ -90,3 +90,7 @@
 	path = bundle/github-issues
 	url = https://github.com/jaxbot/github-issues.vim.git
 	ignore = all
+[submodule "bundle/indentline"]
+	path = bundle/indentline
+	url = https://github.com/Yggdroot/indentLine.git
+	ignore = all
