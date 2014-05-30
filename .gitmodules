@@ -102,3 +102,7 @@
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim
 	ignore = all
+[submodule "bundle/vim-rooter"]
+	path = bundle/vim-rooter
+	url = https://github.com/airblade/vim-rooter.git
+	ignore = all
