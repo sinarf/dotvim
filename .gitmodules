@@ -94,3 +94,7 @@
 	path = bundle/indentline
 	url = https://github.com/Yggdroot/indentLine.git
 	ignore = all
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+	ignore = all
