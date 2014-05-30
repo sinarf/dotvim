@@ -98,3 +98,7 @@
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
 	ignore = all
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
+	ignore = all
