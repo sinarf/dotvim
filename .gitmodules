@@ -78,10 +78,6 @@
 	path = bundle/vim-airline-tomato
 	url = https://github.com/Zuckonit/vim-airline-tomato.git
 	ignore = all
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-	ignore = all
 [submodule "bundle/calendar"]
 	path = bundle/calendar
 	url = https://github.com/itchyny/calendar.vim.git
