@@ -102,3 +102,7 @@
 	path = bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter.git
 	ignore = all
+[submodule "bundle/vimbed"]
+	path = bundle/vimbed
+	url = http://github.com/ardagnir/vimbed
+	ignore = all
