@@ -150,12 +150,6 @@ augroup filetype_todotxt
 	autocmd FileType todotxt nnoremap <buffer> <localleader>ca ^i@call <ESC>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>on ^i@online <ESC>
 augroup END
-augroup END
-augroup END
-augroup filetype_markdown 
-	autocmd!
-	autocmd BufNewFile,BufRead *.md set filetype=markdown
-augroup END
 augroup filetype_vimwiki 
 	autocmd!
 	autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
@@ -190,6 +184,11 @@ augroup filetype_javascript
 	autocmd FileType javascript,json  set shiftwidth=2
 	autocmd FileType javascript,json  set expandtab
 	autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
+augroup END
+
+augroup filetype_markdown 
+	autocmd!
+	autocmd BufNewFile,BufRead *.md setf=markdown
 augroup END
 " }}}
 "##############################################################################
