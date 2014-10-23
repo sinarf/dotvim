@@ -206,11 +206,6 @@ iabbrev  #### ##################################################################
 "###############################################################################
 " {{{ AUTOCMD:
 "############################################################################### 
-" format the xml html and so on before writing it to the disk
-augroup bufWritePre
-	autocmd!
-	autocmd BufWritePre *.xml,*.html,*.xsl,*.wsdl :normal gg=G
-augroup END
 " }}}
 "################################################################################
 " {{{ PLUGIN CONFIGURATION: 
@@ -239,7 +234,7 @@ let g:tomato#restinfo = "☺"
 
 " vim wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
-let g:vimwiki_folding = 1
+"let g:vimwiki_folding = 1
 
 if has('statusline')
 	set laststatus=2
