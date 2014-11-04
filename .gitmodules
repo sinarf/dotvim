@@ -106,3 +106,7 @@
 	path = bundle/vimbed
 	url = http://github.com/ardagnir/vimbed
 	ignore = all
+[submodule "bundle/vim-gradle"]
+	path = bundle/vim-gradle
+	url = https://github.com/tfnico/vim-gradle
+	ignore = all
