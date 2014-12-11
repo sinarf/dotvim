@@ -273,4 +273,10 @@ set wildignore+=*/bin/**
 " disable caching
 "let g:ctrlp_use_caching=0
 
+" bash ide configuration 
+let g:BASH_AuthorName   = 'Michcl Blavin'
+let g:BASH_Email        = 'michel@blavin.fr'
+let g:BASH_Company      = ''
+
 " }}]
+" 
