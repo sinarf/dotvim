@@ -278,5 +278,7 @@ let g:BASH_AuthorName   = 'Michcl Blavin'
 let g:BASH_Email        = 'michel@blavin.fr'
 let g:BASH_Company      = ''
 
+" conoline autostart 
+let g:conoline_auto_enable = 1
 " }}]
 " 

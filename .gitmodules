@@ -110,3 +110,7 @@
 	path = bundle/vim-gradle
 	url = https://github.com/tfnico/vim-gradle
 	ignore = all
+[submodule "bundle/conoline.vim"]
+	path = bundle/conoline.vim
+	url = https://github.com/miyakogi/conoline.vim.git
+	ignore = all
