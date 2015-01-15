@@ -280,5 +280,10 @@ let g:BASH_Company      = ''
 
 " conoline autostart 
 let g:conoline_auto_enable = 1
+
+" angular plugin
+let g:angular_source_directory = 'src'
+let g:angular_test_directory = 'test'
+
 " }}]
 " 
