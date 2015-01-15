@@ -134,3 +134,8 @@
 	path = bundle/vim-angular
 	url = https://github.com/burnettk/vim-angular.git
 	ignore = all
+[submodule "bundle/didyoumean"]
+	path = bundle/didyoumean
+	url = https://github.com/EinfachToll/DidYouMean.git
+	ignore = all
+[submodule "bundle/didyoumean"]
