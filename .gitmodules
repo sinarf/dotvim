@@ -138,4 +138,7 @@
 	path = bundle/didyoumean
 	url = https://github.com/EinfachToll/DidYouMean.git
 	ignore = all
-[submodule "bundle/didyoumean"]
+[submodule "bundle/grunt.vim"]
+	path = bundle/grunt.vim
+	url = https://github.com/mklabs/grunt.vim.git
+	ignore = all
