@@ -142,3 +142,10 @@
 	path = bundle/grunt.vim
 	url = https://github.com/mklabs/grunt.vim.git
 	ignore = all
+[submodule "bundle/images"]
+	path = bundle/images
+	url = https://github.com/ashisha/image.vim.git
+	ignore = all
+[submodule "bundle/vim-ansible-yaml"]
+	path = bundle/vim-ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml.git

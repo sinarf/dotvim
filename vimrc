@@ -44,7 +44,7 @@ set lbr
 
 " Variable setup
 if has('win32') || has ('win64')
-	" Windows workarounds: until my work machine is under linux.
+	" Windows workarounds: Once upon a time I was working with Windows.
 	let $VIMHOME = $HOME."/vimfiles"
 	" use cygwin as shell 
 	"  mbl - disable the use of cygwin. 
