@@ -8,6 +8,33 @@ set nocompatible
 let mapleader = ","
 let maplocalleader = ";"
 
+
+" {{{ VUNDLE CONFIG
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+" useability
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'edkolev/promptline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'ervandew/supertab'
+
+" Dev tools 
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'toritori0318/vim-redmine'
+Plugin 'junegunn/vim-github-dashboard'
+
+" Syntax coloring 
+Plugin 'chrisbra/csv.vim'
+Plugin 'vim-scripts/nginx.vim'
+Plugin 'altercation/vim-colors-solarized'
+call vundle#end()     
+" }}}
 colorscheme default
 "colorscheme vividchalk
 set background=dark
@@ -225,6 +252,8 @@ vmap <A-j> ]egv
 
 
 " pomodoro airline :
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 let g:tomato#remind = "☻" 
 let g:tomato#restinfo = "☺"
 
@@ -246,6 +275,7 @@ if has('statusline')
 	set statusline+=\ %=[%{GitBranch()}]
 	set statusline+=%#warningmsg#
 	set statusline+=%{SyntasticStatuslineFlag()}
+	set statusline+=%{eclim#project#util#ProjectStatusLine()}
 	set statusline+=%*
 endif
 
@@ -280,6 +310,9 @@ let g:conoline_auto_enable = 1
 " angular plugin
 let g:angular_source_directory = 'src'
 let g:angular_test_directory = 'test'
+
+" eclim 
+let g:EclimProjectStatusLine = 'eclim(p=${name}, n=${natures})'
 
 " }}]
 " 
