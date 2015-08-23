@@ -16,18 +16,25 @@ Plugin 'gmarik/Vundle.vim'
 
 " useability
 Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
+"Plugin 'edkolev/tmuxline.vim'
 Plugin 'edkolev/promptline.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 
+
 " Dev tools 
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'toritori0318/vim-redmine'
 Plugin 'junegunn/vim-github-dashboard'
+Plugin 'Chiel92/vim-autoformat'
+
+"Javascript 
+Plugin  'mklabs/grunt.vim'
+Plugin  'ain/vim-bower'
+Plugin  'burnettk/vim-angular'
 
 " Syntax coloring 
 Plugin 'chrisbra/csv.vim'
@@ -300,9 +307,9 @@ set wildignore+=*/bin/**
 "let g:ctrlp_use_caching=0
 
 " bash ide configuration 
-let g:BASH_AuthorName   = 'Michcl Blavin'
-let g:BASH_Email        = 'michel@blavin.fr'
-let g:BASH_Company      = ''
+"let g:BASH_AuthorName   = 'Michcl Blavin'
+"let g:BASH_Email        = 'michel@blavin.fr'
+"let g:BASH_Company      = ''
 
 " conoline autostart 
 let g:conoline_auto_enable = 1
