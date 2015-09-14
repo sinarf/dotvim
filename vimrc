@@ -31,6 +31,9 @@ Plugin 'toritori0318/vim-redmine'
 Plugin 'junegunn/vim-github-dashboard'
 Plugin 'Chiel92/vim-autoformat'
 
+" Writing 
+Plugin  'kakkyz81/evervim'
+
 "Javascript 
 Plugin  'mklabs/grunt.vim'
 Plugin  'ain/vim-bower'
@@ -320,6 +323,7 @@ let g:angular_test_directory = 'test'
 
 " eclim 
 let g:EclimProjectStatusLine = 'eclim(p=${name}, n=${natures})'
+
 
 " }}]
 " 
