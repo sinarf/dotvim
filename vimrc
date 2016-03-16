@@ -16,12 +16,10 @@ call vundle#begin()
 
 " useability
 Plugin 'bling/vim-airline'
-"Plugin 'edkolev/tmuxline.vim'
 Plugin 'edkolev/promptline.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ervandew/supertab'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 
 " Dev tools 
@@ -32,16 +30,9 @@ Plugin 'junegunn/vim-github-dashboard'
 Plugin 'Chiel92/vim-autoformat'
 
 " Writing 
-Plugin  'kakkyz81/evervim'
+Plugin 'parkr/vim-jekyll'
 
-"Javascript 
-Plugin  'mklabs/grunt.vim'
-Plugin  'ain/vim-bower'
-Plugin  'burnettk/vim-angular'
-
-" Syntax coloring 
 Plugin 'chrisbra/csv.vim'
-Plugin 'vim-scripts/nginx.vim'
 Plugin 'altercation/vim-colors-solarized'
 call vundle#end()     
 " }}}
@@ -113,20 +104,22 @@ endif
 nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
 nnoremap <leader>sv :source $HOME/.vimrc<CR>
 nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
+
 " swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
 nnoremap <leader>tm :set filetype=markdown<CR>
+
 " insert today date	
 nnoremap <leader>dt "=strftime("%Y-%m-%d")<CR>P
 nnoremap <leader>df "=strftime("%A %d %B %Y")<CR>P
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
+
 " running the current script 
 nnoremap <leader>rt	:! %<CR>
 
 " NERDTree 
 map <F2> <Esc>:NERDTreeToggle<CR> "Toggle the file browser
 map <A-F1> <Esc>:NERDTreeFind<CR> "Find the current file in the file browser
-
 
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 " running the current script 
@@ -138,7 +131,13 @@ nnoremap <leader>i	gg=G
 " spell checking 
 nnoremap <silent> <leader>s :set spell!<CR>
 
+" Recent files
 nnoremap <leader>m :MRU<CR>
+
+" evervim 
+nnoremap <leader>ec :EvervimCreateNote<CR>
+nnoremap <leader>en :EvervimNotebookList<CR>
+nnoremap <leader>et :EvervimListTags<CR>
 " }}}
 "###############################################################################
 " {{{ AUTOCMD:
@@ -286,6 +285,7 @@ let g:calendar_google_task = 1
 
 " Use <leader>t to open ctrlp
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
 " Ignore these directories
 set wildignore+=*/build/**
 set wildignore+=*/target/**

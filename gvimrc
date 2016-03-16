@@ -7,7 +7,7 @@ if has('win32') || has('win64')
 	set guifont=Consolas:h10
 elseif has('unix')
 	"set guifont=Ubuntu\ Mono\ 10
-	set guifont=Monaco\ 8
+	set guifont=Monaco\ 10
 endif
 " colors I like
 "colorscheme desert
