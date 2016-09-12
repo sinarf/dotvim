@@ -16,8 +16,8 @@ endif
 " ------------------------------------------------------------------
 "colorscheme candyman
 colorscheme solarized
-"set background=dark
-set background=light
+set background=dark
+"set background=light
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_contrast="high"    "default value is normal
 syntax enable
