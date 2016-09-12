@@ -28,6 +28,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'toritori0318/vim-redmine'
 Plugin 'junegunn/vim-github-dashboard'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'diepm/vim-rest-console'
 
 " Writing 
 Plugin 'parkr/vim-jekyll'
