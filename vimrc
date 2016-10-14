@@ -20,6 +20,7 @@ Plugin 'edkolev/promptline.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-scripts/mru.vim'
 
 
 " Dev tools 
@@ -29,6 +30,7 @@ Plugin 'toritori0318/vim-redmine'
 Plugin 'junegunn/vim-github-dashboard'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'diepm/vim-rest-console'
+Plugin 'ervandew/supertab' 
 
 " Writing 
 Plugin 'parkr/vim-jekyll'
