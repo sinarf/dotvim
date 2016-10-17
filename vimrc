@@ -213,6 +213,7 @@ augroup END
 augroup filetype_markdown 
 	autocmd!
 	autocmd BufNewFile,BufRead *.md setf=markdown
+	autocmd FileType markdown setlocal spell spelllang=en_us 
 augroup END
 " }}}
 "##############################################################################
