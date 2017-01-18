@@ -14,6 +14,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "Plugin 'gmarik/Vundle.vim'
 
+Plugin 'PotatoesMaster/i3-vim-syntax'
+
 " useability
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/promptline.vim'
