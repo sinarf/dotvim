@@ -189,7 +189,7 @@ augroup END
 
 augroup filetype_gitcommit 
 	autocmd!
-	autocmd Filetype gitcommit setlocal spell textwidth=72
+	autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
 augroup END
 
 augroup filetype_groovy
@@ -217,6 +217,11 @@ augroup filetype_markdown
 	autocmd BufNewFile,BufRead *.md setf=markdown
 	autocmd FileType markdown setlocal spell spelllang=en_us 
 augroup END
+augroup fileype_txt
+	autocmd!
+	autocmd FileType text setlocal spell spelllang=fr
+augroup END
+	
 " }}}
 "##############################################################################
 " {{{ ABBREVIATIONS: 
