@@ -152,6 +152,31 @@ augroup filetype_xml
 	autocmd!
 	autocmd FileType xml,xsd,wsdl nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G''
 augroup END
+augroup filetype_todotxt
+	autocmd!
+	autocmd BufEnter todo.txt :set ft=todotxt
+	" Google task sync need the todo.sh and google plugin
+	autocmd BufWritePost todo.txt :!todo.sh google push
+	" FIXME 
+	"autocmd BufReadPost todo.txt :!todo.sh google pull
+	autocmd FileType todotxt nnoremap <buffer> <localleader>gl :!todo.sh google pull<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>gp :!todo.sh google push<CR>
+	" Task actions
+	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
+	"prioritize 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pa ^i(A) <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pb ^i(B) <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pc ^i(C) <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pd ^i(D) <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pe ^i(E) <ESC> 
+	" context
+	autocmd FileType todotxt nnoremap <buffer> <localleader>ho ^i@home <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>wk ^i@work <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>wo ^i@waitingOn <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>ca ^i@call <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>on ^i@online <ESC>
+augroup END
 augroup filetype_vimwiki 
 	autocmd!
 	autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
