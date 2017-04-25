@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/mru.vim'
+Plugin 'vim-scripts/todo-txt.vim'
 
 
 " Dev tools 
