@@ -157,10 +157,6 @@ augroup filetype_todotxt
 	autocmd BufEnter todo.txt :set ft=todotxt
 	" Google task sync need the todo.sh and google plugin
 	autocmd BufWritePost todo.txt :!todo.sh google push
-	" FIXME 
-	"autocmd BufReadPost todo.txt :!todo.sh google pull
-	autocmd FileType todotxt nnoremap <buffer> <localleader>gl :!todo.sh google pull<CR>
-	autocmd FileType todotxt nnoremap <buffer> <localleader>gp :!todo.sh google push<CR>
 	" Task actions
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
