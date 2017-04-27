@@ -9,40 +9,51 @@ let mapleader = ","
 let maplocalleader = ";"
 
 
-" {{{ VUNDLE CONFIG
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" {{{ dein CONFIG
+
+if &compatible
+  set nocompatible
+endif
+filetype off
+" append to runtime path
+set rtp+=/usr/share/vim/vimfiles
+" initialize dein, plugins are installed to this directory
+call dein#begin(expand('~/.cache/dein'))
 
 "syntax plugins
-Plugin 'PotatoesMaster/i3-vim-syntax'
-Plugin 'leafgarland/typescript-vim'
-
+call dein#add('PotatoesMaster/i3-vim-syntax')
+call dein#add('leafgarland/typescript-vim')
 
 " useability
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/promptline.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-scripts/mru.vim'
-Plugin 'vim-scripts/todo-txt.vim'
+call dein#add('bling/vim-airline')
+call dein#add('edkolev/promptline.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('scrooloose/nerdcommenter')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('vim-scripts/mru.vim')
+call dein#add('vim-scripts/todo-txt.vim')
 
 
 " Dev tools 
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'toritori0318/vim-redmine'
-Plugin 'junegunn/vim-github-dashboard'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'diepm/vim-rest-console'
-Plugin 'ervandew/supertab' 
+call dein#add('scrooloose/syntastic')
+call dein#add('tpope/vim-fugitive')
+call dein#add('junegunn/vim-github-dashboard')
+call dein#add('Chiel92/vim-autoformat')
 
 " Writing 
-Plugin 'parkr/vim-jekyll'
+call dein#add('parkr/vim-jekyll')
 
-Plugin 'chrisbra/csv.vim'
-Plugin 'altercation/vim-colors-solarized'
-call vundle#end()     
+" eye candy
+call dein#add('altercation/vim-colors-solarized')
+
+" exit dein
+call dein#end()
+" auto-install missing packages on startup
+if dein#check_install()
+  call dein#install()
+endif
+filetype plugin on
+
 " }}}
 colorscheme default
 "colorscheme vividchalk
