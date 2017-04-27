@@ -12,9 +12,11 @@ let maplocalleader = ";"
 " {{{ VUNDLE CONFIG
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"Plugin 'gmarik/Vundle.vim'
 
+"syntax plugins
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'leafgarland/typescript-vim'
+
 
 " useability
 Plugin 'bling/vim-airline'
