@@ -1,9 +1,13 @@
 #!/bin/sh
 
 # this scipt setup my vim configuration 
+echo "symlink the spell directory to dropbox" 
+cd ~/.vim
+ln -sf ~/Dropbox/config/vim/spell
+cd - 
 
-cd ~
 echo "Creating the symbolic links..."
+cd ~
 ln -sfv .vim/vimrc .vimrc
 ln -sfv .vim/vimrc .vimrc
 
