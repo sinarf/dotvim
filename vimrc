@@ -22,7 +22,6 @@ call dein#begin(expand('~/.cache/dein'))
 
 "syntax plugins
 call dein#add('PotatoesMaster/i3-vim-syntax')
-call dein#add('leafgarland/typescript-vim')
 
 " useability
 call dein#add('bling/vim-airline')
@@ -33,12 +32,22 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('vim-scripts/mru.vim')
 call dein#add('vim-scripts/todo-txt.vim')
 
-
 " Dev tools 
 call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-fugitive')
 call dein#add('junegunn/vim-github-dashboard')
 call dein#add('Chiel92/vim-autoformat')
+call dein#add('tpope/vim-surround')
+call dein#add('editorconfig/editorconfig-vim')
+call dein#add('Valloric/YouCompleteMe', {
+        \   'build': {
+        \     'linux': 'install.py --all',
+        \   }
+        \ })
+
+" typescript 
+call dein#add('leafgarland/typescript-vim')
+call dein#add('Quramy/tsuquyomi')
 
 " Writing 
 call dein#add('parkr/vim-jekyll')
@@ -168,8 +177,7 @@ augroup END
 augroup filetype_todotxt
 	autocmd!
 	autocmd BufEnter todo.txt :set ft=todotxt
-	" Google task sync need the todo.sh and google plugin
-	autocmd BufWritePost todo.txt :!todo.sh google push
+	autocmd BufEnter done.txt :set ft=todotxt
 	" Task actions
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
@@ -330,6 +338,9 @@ let g:angular_test_directory = 'test'
 " eclim 
 let g:EclimProjectStatusLine = 'eclim(p=${name}, n=${natures})'
 
-
+"enable keyboard shortcuts
+let g:tern_map_keys=1
+"show argument hints
+let g:tern_show_argument_hints='on_hold'
 " }}]
 " 
