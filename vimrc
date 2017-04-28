@@ -35,6 +35,7 @@ call dein#add('vim-scripts/todo-txt.vim')
 " Dev tools 
 call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-fugitive')
+call dein#add('tpope/vim-unimpaired')
 call dein#add('junegunn/vim-github-dashboard')
 call dein#add('Chiel92/vim-autoformat')
 call dein#add('tpope/vim-surround')
@@ -322,11 +323,6 @@ set wildignore+=*/bin/**
 
 " disable caching
 "let g:ctrlp_use_caching=0
-
-" bash ide configuration 
-"let g:BASH_AuthorName   = 'Michcl Blavin'
-"let g:BASH_Email        = 'michel@blavin.fr'
-"let g:BASH_Company      = ''
 
 " conoline autostart 
 let g:conoline_auto_enable = 1
