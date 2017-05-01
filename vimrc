@@ -65,9 +65,16 @@ endif
 filetype plugin on
 
 " }}}
-colorscheme default
-"colorscheme vividchalk
+"colorscheme desert
+" ------------------------------------------------------------------
+" Solarized Colorscheme Config
+" ------------------------------------------------------------------
+"colorscheme candyman
+colorscheme solarized
 set background=dark
+"set background=light
+let g:solarized_termcolors=256    "default value is 16
+let g:solarized_contrast="high"    "default value is normal
 
 syntax on
 filetype plugin indent on
