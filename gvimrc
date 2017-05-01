@@ -6,20 +6,10 @@
 if has('win32') || has('win64')
 	set guifont=Consolas:h10
 elseif has('unix')
-	set guifont=Ubuntu\ Mono\ 16
+	set guifont=Ubuntu\ Mono\ 20
 	"set guifont=Monaco\ 14
 endif
 " colors I like
-"colorscheme desert
-" ------------------------------------------------------------------
-" Solarized Colorscheme Config
-" ------------------------------------------------------------------
-"colorscheme candyman
-colorscheme solarized
-set background=dark
-"set background=light
-let g:solarized_termcolors=256    "default value is 16
-let g:solarized_contrast="high"    "default value is normal
 syntax enable
 " ------------------------------------------------------------------
 
