@@ -347,8 +347,6 @@ let g:tern_show_argument_hints='on_hold'
 " YouCompleteMe from the arch wiki
 let g:EclimCompletionMethod = 'omnifunc'
 
-" git issue token
-let g:github_access_token = "543ae704fb363d3697ca8240d65499640c5f5c49"
 
 " ctrlp configuration 
 let g:ctrlp_map = '<c-p>'
