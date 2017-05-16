@@ -65,7 +65,6 @@ filetype plugin on
 " ------------------------------------------------------------------
 "colorscheme candyman
 colorscheme corporation
-"colorscheme desert
 set background=dark
 "set background=light
 let g:solarized_termcolors=256    "default value is 16
@@ -254,7 +253,6 @@ augroup END
 " {{{ ABBREVIATIONS:
 "##############################################################################
 iabbrev @@ michel@blavin.fr
-iabbrev @@@ michel.blavin@vif.fr
 iabbrev  #### ################################################################################<cr>#<cr>################################################################################
 "}}}
 "################################################################################

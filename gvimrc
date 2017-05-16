@@ -6,8 +6,7 @@
 if has('win32') || has('win64')
 	set guifont=Consolas:h10
 elseif has('unix')
-	"set guifont=Ubuntu\ Mono\ 20
-	set guifont=inconsolata\ 18
+	set guifont=Ubuntu\ Mono\ 20
 	"set guifont=Monaco\ 14
 endif
 syntax enable
