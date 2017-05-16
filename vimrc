@@ -301,7 +301,7 @@ if has('statusline')
 	set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
 	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 	"set statusline=%k%F[%{&ff}:%{&fenc}]%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %=[%{GitBranch()}]\ %=[%l,%c,%p%%]
-	set statusline+=\ %=[%{GitBranch()}]
+	"set statusline+=\ %=[%{GitBranch()}]
 	set statusline+=%#warningmsg#
 	set statusline+=%{SyntasticStatuslineFlag()}
 	set statusline+=%{eclim#project#util#ProjectStatusLine()}
@@ -352,15 +352,17 @@ let g:github_access_token = "543ae704fb363d3697ca8240d65499640c5f5c49"
 
 " ctrlp configuration 
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+
 let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+			\ 'file': '\v\.(exe|so|dll)$',
+			\ 'link': 'some_bad_symbolic_links',
+			\ }
 
 
 " }}]
-"
