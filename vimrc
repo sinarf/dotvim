@@ -1,10 +1,10 @@
 " vim:fdm=marker
-" sinarf vimrc 
+" sinarf vimrc
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-" {{{ GENERAL OPTIONS 
+" {{{ GENERAL OPTIONS
 set nocompatible
-" change the leader keys 
+" change the leader keys
 let mapleader = ","
 let maplocalleader = ";"
 
@@ -12,7 +12,7 @@ let maplocalleader = ";"
 " {{{ dein CONFIG
 
 if &compatible
-  set nocompatible
+	set nocompatible
 endif
 filetype off
 " append to runtime path
@@ -32,25 +32,20 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('vim-scripts/mru.vim')
 call dein#add('vim-scripts/todo-txt.vim')
 
-" Dev tools 
+" Dev tools
 call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-fugitive')
-call dein#add('tpope/vim-unimpaired')
 call dein#add('junegunn/vim-github-dashboard')
+call dein#add('jaxbot/github-issues.vim')
 call dein#add('Chiel92/vim-autoformat')
-call dein#add('tpope/vim-surround')
 call dein#add('editorconfig/editorconfig-vim')
-call dein#add('Valloric/YouCompleteMe', {
-        \   'build': {
-        \     'linux': 'install.py --all',
-        \   }
-        \ })
+call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
 
-" typescript 
+" typescript
 call dein#add('leafgarland/typescript-vim')
 call dein#add('Quramy/tsuquyomi')
 
-" Writing 
+" Writing
 call dein#add('parkr/vim-jekyll')
 
 " eye candy
@@ -60,7 +55,7 @@ call dein#add('altercation/vim-colors-solarized')
 call dein#end()
 " auto-install missing packages on startup
 if dein#check_install()
-  call dein#install()
+	call dein#install()
 endif
 filetype plugin on
 
@@ -94,11 +89,11 @@ set shiftwidth=4
 set smarttab
 set ff=unix
 set ffs=unix,dos
-set encoding=utf-8 
+set encoding=utf-8
 set fileencoding=utf-8
 set number
-set foldenable  
-" wrapping not cutting words in the middle: source : http://stackoverflow.com/questions/744159/word-wrap-in-gvim 
+set foldenable
+" wrapping not cutting words in the middle: source : http://stackoverflow.com/questions/744159/word-wrap-in-gvim
 set formatoptions=l
 set lbr
 
@@ -106,8 +101,8 @@ set lbr
 if has('win32') || has ('win64')
 	" Windows workarounds: Once upon a time I was working with Windows.
 	let $VIMHOME = $HOME."/vimfiles"
-	" use cygwin as shell 
-	"  mbl - disable the use of cygwin. 
+	" use cygwin as shell
+	"  mbl - disable the use of cygwin.
 	set shell=C:\cygwin\bin\bash.exe\ -login
 	set shellcmdflag=-c
 	set shellquote=\"
@@ -115,7 +110,7 @@ else
 	let $VIMHOME = $HOME."/.vim"
 endif
 
-" set the vim directories, shamelessly stolen from sensible plugin.  
+" set the vim directories, shamelessly stolen from sensible plugin.
 let s:dir = '~/.local/share/vim'
 if isdirectory(expand(s:dir))
 	if &directory =~# '^\.,'
@@ -130,56 +125,62 @@ if isdirectory(expand(s:dir))
 endif
 " }}}
 "##############################################################################
-" {{{ FUNCTIONS: 
+" {{{ FUNCTIONS:
 "##############################################################################
 " }}}
 "##############################################################################
-" {{{ MAPPING: 
+" {{{ MAPPING:
 "##############################################################################
 "easy edit of vim config file
 nnoremap <leader>ev :e $VIMHOME/vimrc<CR>
 nnoremap <leader>sv :source $HOME/.vimrc<CR>
 nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 
+" Autoformat
+nnoremap <leader>f :Autoformat<CR>
+
 " swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
 nnoremap <leader>tm :set filetype=markdown<CR>
 
-" insert today date	
+" insert today date
 nnoremap <leader>dt "=strftime("%Y-%m-%d")<CR>P
 nnoremap <leader>df "=strftime("%A %d %B %Y")<CR>P
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
 
-" running the current script 
+" running the current script
 nnoremap <leader>rt	:! %<CR>
 
-" NERDTree 
+" NERDTree
 map <F2> <Esc>:NERDTreeToggle<CR> "Toggle the file browser
 map <A-F1> <Esc>:NERDTreeFind<CR> "Find the current file in the file browser
 
 nnoremap <leader>dn "=strftime("%Y-%m-%d")<CR>P
-" running the current script 
+" running the current script
 nnoremap <leader>rt	:! %<CR>
 
-" indent file 
+" indent file
 nnoremap <leader>i	gg=G
 
-" spell checking 
+" spell checking
 nnoremap <silent> <leader>s :set spell!<CR>
 
 " Recent files
 nnoremap <leader>m :MRU<CR>
 
-" evervim 
+" evervim
 nnoremap <leader>ec :EvervimCreateNote<CR>
 nnoremap <leader>en :EvervimNotebookList<CR>
 nnoremap <leader>et :EvervimListTags<CR>
 " }}}
 "###############################################################################
 " {{{ AUTOCMD:
-"############################################################################### 
+"###############################################################################
+
+" autoformat on write
+"au BufWrite * :Autoformat
+
 augroup filetype_xml
-	autocmd!
 	autocmd FileType xml,xsd,wsdl nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G''
 augroup END
 augroup filetype_todotxt
@@ -189,31 +190,31 @@ augroup filetype_todotxt
 	" Task actions
 	autocmd FileType todotxt nnoremap <buffer> <localleader>d :TodoDone<CR>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>c :TodoCancelled<CR>
-	"prioritize 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>pa ^i(A) <ESC> 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>pb ^i(B) <ESC> 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>pc ^i(C) <ESC> 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>pd ^i(D) <ESC> 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>pe ^i(E) <ESC> 
+	"prioritize
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pa ^i(A) <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pb ^i(B) <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pc ^i(C) <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pd ^i(D) <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>pe ^i(E) <ESC>
 	" context
-	autocmd FileType todotxt nnoremap <buffer> <localleader>ho ^i@home <ESC> 
-	autocmd FileType todotxt nnoremap <buffer> <localleader>wk ^i@work <ESC> 
+	autocmd FileType todotxt nnoremap <buffer> <localleader>ho ^i@home <ESC>
+	autocmd FileType todotxt nnoremap <buffer> <localleader>wk ^i@work <ESC>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>wo ^i@waitingOn <ESC>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>ca ^i@call <ESC>
 	autocmd FileType todotxt nnoremap <buffer> <localleader>on ^i@online <ESC>
 augroup END
-augroup filetype_vimwiki 
+augroup filetype_vimwiki
 	autocmd!
 	autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
-	autocmd FileType vimwiki nnoremap <leader>wf :VWS 
+	autocmd FileType vimwiki nnoremap <leader>wf :VWS
 	" make the file directory to be the current directory
-	autocmd BufEnter *.wiki silent! lcd %:p:h 
+	autocmd BufEnter *.wiki silent! lcd %:p:h
 	autocmd BufRead,BufWritePre diary.wiki :VimwikiDiaryGenerateLinks
 	autocmd Filetype vimwiki setlocal spell
 	autocmd BufWritePost *.wiki :Vimwiki2HTML
 augroup END
 
-augroup filetype_gitcommit 
+augroup filetype_gitcommit
 	autocmd!
 	autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
 augroup END
@@ -227,8 +228,8 @@ augroup filetype_dosbatch
 	autocmd!
 	" use cmd as shell instead of cygwin -- won't work on non windows, but
 	" who would be crazy enoough to develop dosbatch script if your are not
-	" under windows. 
-	autocmd FileType dosbatch :set shell=cmd 
+	" under windows.
+	autocmd FileType dosbatch :set shell=cmd
 augroup END
 augroup filetype_javascript
 	autocmd!
@@ -238,19 +239,19 @@ augroup filetype_javascript
 	autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
 augroup END
 
-augroup filetype_markdown 
+augroup filetype_markdown
 	autocmd!
 	autocmd BufNewFile,BufRead *.md setf=markdown
-	autocmd FileType markdown setlocal spell spelllang=en_us 
+	autocmd FileType markdown setlocal spell spelllang=en_us
 augroup END
 augroup fileype_txt
 	autocmd!
 	autocmd FileType text setlocal spell spelllang=fr
 augroup END
-	
+
 " }}}
 "##############################################################################
-" {{{ ABBREVIATIONS: 
+" {{{ ABBREVIATIONS:
 "##############################################################################
 iabbrev @@ michel@blavin.fr
 iabbrev @@@ michel.blavin@vif.fr
@@ -262,11 +263,11 @@ iabbrev  #### ##################################################################
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
 " }}}
 "################################################################################
-" {{{ PLUGIN CONFIGURATION: 
-"################################################################################ 
+" {{{ PLUGIN CONFIGURATION:
+"################################################################################
 
 " unimpaired - Line bubbling.
-" using the same shortcut as in eclipse. 
+" using the same shortcut as in eclipse.
 " Bubble single lines
 nmap <A-Up> [e
 nmap <A-Down> ]e
@@ -285,7 +286,7 @@ vmap <A-j> ]egv
 " pomodoro airline :
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:tomato#remind = "☻" 
+let g:tomato#remind = "☻"
 let g:tomato#restinfo = "☺"
 
 " vim wiki
@@ -310,13 +311,13 @@ if has('statusline')
 	set statusline+=%*
 endif
 
-" Easy motion plugin 
+" Easy motion plugin
 let g:EasyMotion_leader_key = '<Leader>'
 
-" added for groovy taglists source : www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/ 
+" added for groovy taglists source : www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/
 let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;' . 'f:function;v:variables'
 
-" Calendar 
+" Calendar
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
@@ -331,19 +332,26 @@ set wildignore+=*/bin/**
 " disable caching
 "let g:ctrlp_use_caching=0
 
-" conoline autostart 
+" conoline autostart
 let g:conoline_auto_enable = 1
 
 " angular plugin
 let g:angular_source_directory = 'src'
 let g:angular_test_directory = 'test'
 
-" eclim 
+" eclim
 let g:EclimProjectStatusLine = 'eclim(p=${name}, n=${natures})'
 
 "enable keyboard shortcuts
 let g:tern_map_keys=1
 "show argument hints
 let g:tern_show_argument_hints='on_hold'
+
+" YouCompleteMe from the arch wiki
+let g:EclimCompletionMethod = 'omnifunc'
+
+" git issue token
+let g:github_access_token = "543ae704fb363d3697ca8240d65499640c5f5c49"
+
 " }}]
-" 
+"
