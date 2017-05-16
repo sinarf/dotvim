@@ -29,7 +29,6 @@ call dein#add('edkolev/promptline.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/nerdcommenter')
 call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('vim-scripts/mru.vim')
 call dein#add('vim-scripts/todo-txt.vim')
 
 " Dev tools
@@ -350,6 +349,18 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 " git issue token
 let g:github_access_token = "543ae704fb363d3697ca8240d65499640c5f5c49"
+
+" ctrlp configuration 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
 
 " }}]
 "
