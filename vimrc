@@ -42,6 +42,7 @@ call dein#add('jaxbot/github-issues.vim')
 call dein#add('Chiel92/vim-autoformat')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
+call dein#add('Raimondi/delimitMate')
 
 " typescript
 call dein#add('leafgarland/typescript-vim')
