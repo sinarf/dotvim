@@ -178,7 +178,12 @@ nnoremap <leader>et :EvervimListTags<CR>
 " autoformat on write
 "au BufWrite * :Autoformat
 
+augroup autoformat
+	autocmd!
+	au BufWrite *.ts,*.js :Autoformat<CR>
+augroup END
 augroup filetype_xml
+	autocmd!
 	autocmd FileType xml,xsd,wsdl nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G''
 augroup END
 augroup filetype_todotxt
@@ -348,7 +353,7 @@ let g:tern_show_argument_hints='on_hold'
 let g:EclimCompletionMethod = 'omnifunc'
 
 
-" ctrlp configuration 
+" ctrlp configuration
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
