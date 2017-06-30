@@ -50,6 +50,7 @@ call dein#add('Quramy/tsuquyomi')
 
 " Writing
 call dein#add('parkr/vim-jekyll')
+call dein#add('vimwiki/vimwiki')
 
 " eye candy
 call dein#add('altercation/vim-colors-solarized')
@@ -190,16 +191,16 @@ augroup filetype_xml
 	autocmd!
 	autocmd FileType xml,xsd,wsdl nnoremap <buffer> <localleader>f :silent %!xmllint --format -<CR>gg=G''
 augroup END
-"augroup filetype_vimwiki
-	"autocmd!
-	"autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
-	"autocmd FileType vimwiki nnoremap <leader>wf :VWS
-	"" make the file directory to be the current directory
-	"autocmd BufEnter *.wiki silent! lcd %:p:h
-	"autocmd BufRead,BufWritePre diary.wiki :VimwikiDiaryGenerateLinks
-	"autocmd Filetype vimwiki setlocal spell
-	"autocmd BufWritePost *.wiki :Vimwiki2HTML
-"augroup END
+augroup filetype_vimwiki
+	autocmd!
+	autocmd FileType vimwiki nnoremap <buffer> <localleader>td ^a [ ] <ESC>
+	autocmd FileType vimwiki nnoremap <leader>wf :VWS
+	" make the file directory to be the current directory
+	autocmd BufEnter *.wiki silent! lcd %:p:h
+	autocmd BufRead,BufWritePre diary.wiki :VimwikiDiaryGenerateLinks
+	autocmd Filetype vimwiki setlocal spell
+	autocmd BufWritePost *.wiki :Vimwiki2HTML
+augroup END
 
 "augroup filetype_gitcommit
 	"autocmd!
@@ -276,8 +277,8 @@ augroup END
 "let g:tomato#restinfo = "☺"
 
 "" vim wiki
-"let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
-""let g:vimwiki_folding = 1
+let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
+"let g:vimwiki_folding = 1
 
 "if has('statusline')
 	"set laststatus=2
