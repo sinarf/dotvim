@@ -32,7 +32,7 @@ call dein#add('edkolev/promptline.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/nerdcommenter')
 call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('vim-scripts/todo-txt.vim')
+call dein#add('gioele/vim-autoswap')
 
 " Dev tools
 call dein#add('scrooloose/syntastic')
