@@ -203,10 +203,10 @@ augroup filetype_vimwiki
 	autocmd BufWritePost *.wiki :Vimwiki2HTML
 augroup END
 
-augroup filetype_gitcommit
-	autocmd!
-	autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
-augroup END
+"augroup filetype_gitcommit
+	"autocmd!
+	"autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
+"augroup END
 
 augroup filetype_groovy
 	autocmd!
