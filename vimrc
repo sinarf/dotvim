@@ -203,155 +203,155 @@ augroup filetype_vimwiki
 	autocmd BufWritePost *.wiki :Vimwiki2HTML
 augroup END
 
-"augroup filetype_gitcommit
-	"autocmd!
-	"autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
-"augroup END
+augroup filetype_gitcommit
+	autocmd!
+	autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
+augroup END
 
-"augroup filetype_groovy
-	"autocmd!
-	"au BufNewFile,BufRead *.gradle setf groovy
-"augroup END
+augroup filetype_groovy
+	autocmd!
+	au BufNewFile,BufRead *.gradle setf groovy
+augroup END
 
-"augroup filetype_dosbatch
-	"autocmd!
-	"" use cmd as shell instead of cygwin -- won't work on non windows, but
-	"" who would be crazy enoough to develop dosbatch script if your are not
-	"" under windows.
-	"autocmd FileType dosbatch :set shell=cmd
-"augroup END
-"augroup filetype_javascript
-	"autocmd!
-	"autocmd FileType javascript,json  set tabstop=2
-	"autocmd FileType javascript,json  set shiftwidth=2
-	"autocmd FileType javascript,json  set expandtab
-	"autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
-"augroup END
+augroup filetype_dosbatch
+	autocmd!
+	" use cmd as shell instead of cygwin -- won't work on non windows, but
+	" who would be crazy enoough to develop dosbatch script if your are not
+	" under windows.
+	autocmd FileType dosbatch :set shell=cmd
+augroup END
+augroup filetype_javascript
+	autocmd!
+	autocmd FileType javascript,json  set tabstop=2
+	autocmd FileType javascript,json  set shiftwidth=2
+	autocmd FileType javascript,json  set expandtab
+	autocmd FileType javascript,json nnoremap <buffer> <localleader>f :%!python -m json.tool<CR>
+augroup END
 
-"augroup filetype_markdown
-	"autocmd!
-	"autocmd BufNewFile,BufRead *.md setf=markdown
-	"autocmd FileType markdown setlocal spell spelllang=en_us
-"augroup END
-"augroup fileype_txt
-	"autocmd!
-	"autocmd FileType text setlocal spell spelllang=fr
-"augroup END
+augroup filetype_markdown
+	autocmd!
+	autocmd BufNewFile,BufRead *.md setf=markdown
+	autocmd FileType markdown setlocal spell spelllang=en_us
+augroup END
+augroup fileype_txt
+	autocmd!
+	autocmd FileType text setlocal spell spelllang=fr
+augroup END
 
-"" }}}
-""##############################################################################
-"" {{{ ABBREVIATIONS:
-""##############################################################################
-"iabbrev @@ michel@blavin.fr
-"iabbrev  #### ################################################################################<cr>#<cr>################################################################################
-""}}}
-""################################################################################
-""# {{{ COMMANDS
-""################################################################################
-":command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
-"" }}}
-""################################################################################
-"" {{{ PLUGIN CONFIGURATION:
-""################################################################################
+" }}}
+"##############################################################################
+" {{{ ABBREVIATIONS:
+"##############################################################################
+iabbrev @@ michel@blavin.fr
+iabbrev  #### ################################################################################<cr>#<cr>################################################################################
+"}}}
+"################################################################################
+"# {{{ COMMANDS
+"################################################################################
+:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
+" }}}
+"################################################################################
+" {{{ PLUGIN CONFIGURATION:
+"################################################################################
 
-"" unimpaired - Line bubbling.
-"" using the same shortcut as in eclipse.
-"" Bubble single lines
-"nmap <A-Up> [e
-"nmap <A-Down> ]e
-"" Bubble multiple lines
-"vmap <A-Up> [egv
-"vmap <A-Down> ]egv
-"" Same but "à la vim" ...
-"" Bubble single lines
-"nmap <A-k> [e
-"nmap <A-j> ]e
-"" Bubble multiple lines
-"vmap <A-k> [egv
-"vmap <A-j> ]egv
+" unimpaired - Line bubbling.
+" using the same shortcut as in eclipse.
+" Bubble single lines
+nmap <A-Up> [e
+nmap <A-Down> ]e
+" Bubble multiple lines
+vmap <A-Up> [egv
+vmap <A-Down> ]egv
+" Same but "à la vim" ...
+" Bubble single lines
+nmap <A-k> [e
+nmap <A-j> ]e
+" Bubble multiple lines
+vmap <A-k> [egv
+vmap <A-j> ]egv
 
 
-"" pomodoro airline :
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline_powerline_fonts = 1
-"let g:tomato#remind = "☻"
-"let g:tomato#restinfo = "☺"
+" pomodoro airline :
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:tomato#remind = "☻"
+let g:tomato#restinfo = "☺"
 
-"" vim wiki
+" vim wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
-"let g:vimwiki_folding = 1
+let g:vimwiki_folding = 1
 
-"if has('statusline')
-	"set laststatus=2
-	""" Broken down into easily includeable segmentd
-	"set statusline=%<%f\   " Filename
-	"set statusline+=%w%h%m%r " Options
-	"set statusline+=%{fugitive#statusline()} "  Git Hotness
-	"set statusline+=\ [%{&ff}/%Y]            " filetype
-	"set statusline+=\ [%{getcwd()}]          " current dir
-	"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
-	"set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-	""set statusline=%k%F[%{&ff}:%{&fenc}]%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %=[%{GitBranch()}]\ %=[%l,%c,%p%%]
-	""set statusline+=\ %=[%{GitBranch()}]
-	"set statusline+=%#warningmsg#
-	"set statusline+=%{SyntasticStatuslineFlag()}
-	"set statusline+=%{eclim#project#util#ProjectStatusLine()}
-	"set statusline+=%*
-"endif
+if has('statusline')
+	set laststatus=2
+	"" Broken down into easily includeable segmentd
+	set statusline=%<%f\   " Filename
+	set statusline+=%w%h%m%r " Options
+	set statusline+=%{fugitive#statusline()} "  Git Hotness
+	set statusline+=\ [%{&ff}/%Y]            " filetype
+	set statusline+=\ [%{getcwd()}]          " current dir
+	set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+	"set statusline=%k%F[%{&ff}:%{&fenc}]%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %=[%{GitBranch()}]\ %=[%l,%c,%p%%]
+	"set statusline+=\ %=[%{GitBranch()}]
+	set statusline+=%#warningmsg#
+	set statusline+=%{SyntasticStatuslineFlag()}
+	set statusline+=%{eclim#project#util#ProjectStatusLine()}
+	set statusline+=%*
+endif
 
-"" Easy motion plugin
-"let g:EasyMotion_leader_key = '<Leader>'
+" Easy motion plugin
+let g:EasyMotion_leader_key = '<Leader>'
 
-"" added for groovy taglists source : www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/
-"let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;' . 'f:function;v:variables'
+" added for groovy taglists source : www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/
+let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;' . 'f:function;v:variables'
 
-"" Calendar
-"let g:calendar_google_calendar = 1
-"let g:calendar_google_task = 1
+" Calendar
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
 
-"" Use <leader>t to open ctrlp
-"let g:ctrlp_map = '<leader>t'
-"let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
-"" Ignore these directories
-"set wildignore+=*/build/**
-"set wildignore+=*/target/**
-"set wildignore+=*/bin/**
+" Use <leader>t to open ctrlp
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
+" Ignore these directories
+set wildignore+=*/build/**
+set wildignore+=*/target/**
+set wildignore+=*/bin/**
 
-"" disable caching
-""let g:ctrlp_use_caching=0
+" disable caching
+"let g:ctrlp_use_caching=0
 
-"" conoline autostart
-"let g:conoline_auto_enable = 1
+" conoline autostart
+let g:conoline_auto_enable = 1
 
-"" angular plugin
-"let g:angular_source_directory = 'src'
-"let g:angular_test_directory = 'test'
+" angular plugin
+let g:angular_source_directory = 'src'
+let g:angular_test_directory = 'test'
 
-"" eclim
-"let g:EclimProjectStatusLine = 'eclim(p=${name}, n=${natures})'
+" eclim
+let g:EclimProjectStatusLine = 'eclim(p=${name}, n=${natures})'
 
-""enable keyboard shortcuts
-"let g:tern_map_keys=1
-""show argument hints
-"let g:tern_show_argument_hints='on_hold'
+"enable keyboard shortcuts
+let g:tern_map_keys=1
+"show argument hints
+let g:tern_show_argument_hints='on_hold'
 
-"" YouCompleteMe from the arch wiki
-"let g:EclimCompletionMethod = 'omnifunc'
-
-
-"" ctrlp configuration
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlP'
+" YouCompleteMe from the arch wiki
+let g:EclimCompletionMethod = 'omnifunc'
 
 
-"let g:ctrlp_working_path_mode = 'ra'
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
-"let g:ctrlp_custom_ignore = {
-			"\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-			"\ 'file': '\v\.(exe|so|dll)$',
-			"\ 'link': 'some_bad_symbolic_links',
-			"\ }
+" ctrlp configuration
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 
-"" }}]
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+let g:ctrlp_custom_ignore = {
+			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+			\ 'file': '\v\.(exe|so|dll)$',
+			\ 'link': 'some_bad_symbolic_links',
+			\ }
+
+
+" }}]
