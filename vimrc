@@ -309,13 +309,6 @@ let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;' . 'f:f
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
-" Use <leader>t to open ctrlp
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
-" Ignore these directories
-set wildignore+=*/build/**
-set wildignore+=*/target/**
-set wildignore+=*/bin/**
 
 " disable caching
 "let g:ctrlp_use_caching=0
@@ -340,18 +333,24 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 
 " ctrlp configuration
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_map = '<c-p>'
+" Use <leader>t to open ctrlp
+let g:ctrlp_map = '<leader>t'
+" Ignore these directories
 let g:ctrlp_cmd = 'CtrlP'
 
 
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*
-let g:ctrlp_custom_ignore = {
-			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-			\ 'file': '\v\.(exe|so|dll)$',
-			\ 'link': 'some_bad_symbolic_links',
-			\ }
+set wildignore+=*/build/**
+set wildignore+=*/target/**
+set wildignore+=*/bin/**
+set wildignore+=*/tmp/*
+set wildignore+=*so
+set wildignore+=**.swp
+set wildignore+=*.zip
+set wildignore+=*/node_modules/*
+set wildignore+=**/dist/*
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
+
 
 
 " }}]
