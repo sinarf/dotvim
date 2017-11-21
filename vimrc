@@ -23,7 +23,7 @@ call dein#begin(expand('~/.cache/dein'))
 "syntax plugins
 call dein#add('PotatoesMaster/i3-vim-syntax')
 
-" productivity 
+" productivity
 call dein#add('freitass/todo.txt-vim')
 
 " useability
@@ -169,9 +169,6 @@ nnoremap <leader>i	gg=G
 " spell checking
 nnoremap <silent> <leader>s :set spell!<CR>
 
-" Recent files
-nnoremap <leader>m :MRU<CR>
-
 " evervim
 nnoremap <leader>ec :EvervimCreateNote<CR>
 nnoremap <leader>en :EvervimNotebookList<CR>
@@ -182,11 +179,12 @@ nnoremap <leader>et :EvervimListTags<CR>
 "###############################################################################
 
 " autoformat on write
-"au BufWrite * :Autoformat
-
 augroup autoformat
 	autocmd!
-	au BufWrite *.ts,*.js :Autoformat<CR>
+	" All files 
+	"au BufWrite * :Autoformat
+	" Only certain files 
+	au BufWrite *.ts,*.js,*.html,*.css,*.json :Autoformat<CR>
 augroup END
 augroup filetype_xml
 	autocmd!
@@ -204,8 +202,8 @@ augroup filetype_vimwiki
 augroup END
 
 "augroup filetype_gitcommit
-	"autocmd!
-	"autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
+"autocmd!
+"autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
 "augroup END
 
 augroup filetype_groovy
