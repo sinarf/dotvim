@@ -295,6 +295,11 @@ if has('statusline')
 	set statusline+=%*
 endif
 
+"github issue open in the current window 
+let g:github_same_window = 1
+let g:gissues_lazy_load = 1
+let g:gissues_async_omni = 1
+
 " Easy motion plugin
 let g:EasyMotion_leader_key = '<Leader>'
 
