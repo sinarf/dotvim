@@ -289,8 +289,6 @@ if has('statusline')
 	set statusline+=\ [%{getcwd()}]          " current dir
 	set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
 	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-	"set statusline=%k%F[%{&ff}:%{&fenc}]%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %=[%{GitBranch()}]\ %=[%l,%c,%p%%]
-	"set statusline+=\ %=[%{GitBranch()}]
 	set statusline+=%#warningmsg#
 	set statusline+=%{SyntasticStatuslineFlag()}
 	set statusline+=%{eclim#project#util#ProjectStatusLine()}
@@ -306,10 +304,6 @@ let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;' . 'f:f
 " Calendar
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
-
-
-" disable caching
-"let g:ctrlp_use_caching=0
 
 " conoline autostart
 let g:conoline_auto_enable = 1
@@ -336,6 +330,8 @@ let g:ctrlp_map = '<leader>t'
 " Ignore these directories
 let g:ctrlp_cmd = 'CtrlP'
 
+" shortcut for mru 
+nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/build/**
