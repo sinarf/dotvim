@@ -268,7 +268,7 @@ nmap <A-j> ]e
 vmap <A-k> [egv
 vmap <A-j> ]egv
 
-
+" TODO check if this work or clean 
 " pomodoro airline :
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
