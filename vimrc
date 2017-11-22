@@ -37,7 +37,6 @@ call dein#add('gioele/vim-autoswap')
 " Dev tools
 call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-fugitive')
-call dein#add('junegunn/vim-github-dashboard')
 call dein#add('jaxbot/github-issues.vim')
 call dein#add('Chiel92/vim-autoformat')
 call dein#add('editorconfig/editorconfig-vim')
