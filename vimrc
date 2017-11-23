@@ -330,6 +330,8 @@ let g:EclimCompletionMethod = 'omnifunc'
 " by default there no completion on gitcommit file but I want it for
 " github-issues plugin 
 let g:ycm_filetype_specific_completion_to_disable = { }
+" manual mode ;)
+let g:ycm_auto_trigger = 0
 
 " ctrlp configuration
 " Use <leader>t to open ctrlp
