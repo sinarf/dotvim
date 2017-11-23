@@ -42,7 +42,6 @@ call dein#add('Chiel92/vim-autoformat')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
 call dein#add('Raimondi/delimitMate')
-call dein#add('ervandew/supertab')
 
 " Language specific plugin 
 " javascript
@@ -328,7 +327,9 @@ let g:tern_show_argument_hints='on_hold'
 
 " YouCompleteMe from the arch wiki
 let g:EclimCompletionMethod = 'omnifunc'
-
+" by default there no completion on gitcommit file but I want it for
+" github-issues plugin 
+let g:ycm_filetype_specific_completion_to_disable = { }
 
 " ctrlp configuration
 " Use <leader>t to open ctrlp
