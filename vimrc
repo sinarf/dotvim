@@ -73,7 +73,6 @@ filetype plugin on
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
 " ------------------------------------------------------------------
-colorscheme elflord
 set background=dark
 "set background=light
 let g:solarized_termcolors=256    "default value is 16
