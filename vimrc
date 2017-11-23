@@ -53,6 +53,9 @@ call dein#add('Quramy/tsuquyomi')
 " Writing
 call dein#add('parkr/vim-jekyll')
 call dein#add('vimwiki/vimwiki')
+call dein#add('xolox/vim-notes')
+" vim-notes dependency
+call dein#add('xolox/vim-misc')
 
 " eye candy
 call dein#add('altercation/vim-colors-solarized')
@@ -354,5 +357,8 @@ set wildignore+=*/node_modules/*
 set wildignore+=**/dist/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
 
+" vim-notes
+let g:notes_directories = ['~/Dropbox/texts/recepies', '~/Dropbox/texts/slam', ]
+let g:notes_suffix = '.txt'
 
 " }}]
