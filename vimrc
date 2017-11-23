@@ -358,7 +358,7 @@ set wildignore+=**/dist/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
 
 " vim-notes
-let g:notes_directories = ['~/Dropbox/texts/recepies', '~/Dropbox/texts/slam', ]
+let g:notes_directories = [ '~/Dropbox/texts']
 let g:notes_suffix = '.txt'
 
 " }}]
