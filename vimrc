@@ -44,7 +44,10 @@ call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer
 call dein#add('Raimondi/delimitMate')
 call dein#add('ervandew/supertab')
 
-" typescript
+" Language specific plugin 
+" javascript
+call dein#add('pangloss/vim-javascript')
+" typescript 
 call dein#add('leafgarland/typescript-vim')
 call dein#add('Quramy/tsuquyomi')
 
@@ -347,7 +350,6 @@ set wildignore+=*.zip
 set wildignore+=*/node_modules/*
 set wildignore+=**/dist/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
-
 
 
 " }}]
