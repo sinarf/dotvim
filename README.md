@@ -10,6 +10,7 @@ This is my dot vim configuration.
 ## On Linux 
 ```shell
 cd ~ && git clone git@github.com:sinarf/dotvim.git .vim && ln -sf .vim/vimrc .vimrc && ln -sf .vim/gvimrc .gvimrc 
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein_installer.sh && sh /tmp/dein_installer.sh ~/.cache/dein
 mkdir -p ~/.local/share/vim/{swap,backup,undo}
 ```
 
