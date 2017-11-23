@@ -33,3 +33,4 @@ set guioptions-=l
 set guioptions-=r
 set guioptions-=b
 
+colorscheme desert
