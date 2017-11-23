@@ -300,7 +300,6 @@ endif
 
 "github issue open in the current window 
 let g:github_same_window = 1
-let g:gissues_lazy_load = 1
 let g:gissues_async_omni = 1
 
 " Easy motion plugin
