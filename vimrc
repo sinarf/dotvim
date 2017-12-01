@@ -207,10 +207,6 @@ augroup filetype_vimwiki
 	autocmd BufWritePost *.wiki :Vimwiki2HTML
 augroup END
 
-"augroup filetype_gitcommit
-"autocmd!
-"autocmd Filetype gitcommit setlocal spell spelllang=fr textwidth=72
-"augroup END
 
 augroup filetype_groovy
 	autocmd!
@@ -336,7 +332,10 @@ let g:EclimCompletionMethod = 'omnifunc'
 " github-issues plugin 
 let g:ycm_filetype_specific_completion_to_disable = { }
 " manual mode ;)
-"let g:ycm_auto_trigger = 0
+let g:ycm_auto_trigger = 0
+" using Ctrl+Space for completion
+let g:ycm_key_invoke_completion = '<C-Space>'
+
 
 " ctrlp configuration
 " Use <leader>t to open ctrlp
@@ -368,6 +367,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" vim signify configuration
 let g:signify_vcs_list= ['git']
 
 " }}]
