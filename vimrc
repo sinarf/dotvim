@@ -25,6 +25,8 @@ call dein#add('PotatoesMaster/i3-vim-syntax')
 
 " productivity
 call dein#add('freitass/todo.txt-vim')
+call dein#add('SirVer/ultisnips')
+call dein#add('honza/vim-snippets')
 
 " useability
 call dein#add('bling/vim-airline')
@@ -43,6 +45,7 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
 call dein#add('ternjs/tern_for_vim')
 call dein#add('Raimondi/delimitMate')
+call dein#add('mhinz/vim-signify')
 
 " Language specific plugin 
 " javascript
@@ -333,7 +336,7 @@ let g:EclimCompletionMethod = 'omnifunc'
 " github-issues plugin 
 let g:ycm_filetype_specific_completion_to_disable = { }
 " manual mode ;)
-let g:ycm_auto_trigger = 0
+"let g:ycm_auto_trigger = 0
 
 " ctrlp configuration
 " Use <leader>t to open ctrlp
@@ -359,5 +362,12 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|bu
 " vim-notes
 let g:notes_directories = [ '~/Dropbox/texts']
 let g:notes_suffix = '.txt'
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:signify_vcs_list= ['git']
 
 " }}]
