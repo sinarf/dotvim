@@ -6,7 +6,8 @@
 if has('win32') || has('win64')
 	set guifont=Consolas:h10
 elseif has('unix')
-	set guifont=Ubuntu\ Mono\ 20
+	"set guifont=Ubuntu\ Mono\ 20
+	set guifont=Fantasque\ Sans\ Mono\ 20
 	"set guifont=Monaco\ 14
 endif
 syntax enable
@@ -33,4 +34,4 @@ set guioptions-=l
 set guioptions-=r
 set guioptions-=b
 
-colorscheme desert
+colorscheme gruvbox

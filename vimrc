@@ -29,7 +29,8 @@ call dein#add('SirVer/ultisnips')
 call dein#add('honza/vim-snippets')
 
 " useability
-call dein#add('bling/vim-airline')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 call dein#add('edkolev/promptline.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/nerdcommenter')
@@ -63,6 +64,7 @@ call dein#add('xolox/vim-misc')
 
 " eye candy
 call dein#add('altercation/vim-colors-solarized')
+call dein#add('morhetz/gruvbox')
 
 " exit dein
 call dein#end()
@@ -281,6 +283,9 @@ let g:tomato#restinfo = "☺"
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
 let g:vimwiki_folding = 1
 
+" disable the airline tmux extension
+let g:airline#extensions#tmuxline#enabled = 0
+
 if has('statusline')
 	set laststatus=2
 	"" Broken down into easily includeable segmentd
@@ -371,3 +376,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:signify_vcs_list= ['git']
 
 " }}]
+" 
