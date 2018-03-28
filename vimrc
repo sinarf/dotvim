@@ -40,7 +40,6 @@ call dein#add('gioele/vim-autoswap')
 " Dev tools
 call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-fugitive')
-call dein#add('jaxbot/github-issues.vim')
 call dein#add('Chiel92/vim-autoformat')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
