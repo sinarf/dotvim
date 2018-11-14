@@ -16,7 +16,7 @@ if &compatible
 endif
 filetype off
 " append to runtime path
-set rtp+=/usr/share/vim/vimfiles
+set rtp+=~/dein.vim
 " initialize dein, plugins are installed to this directory
 call dein#begin(expand('~/.cache/dein'))
 
@@ -25,7 +25,7 @@ call dein#add('PotatoesMaster/i3-vim-syntax')
 
 " productivity
 call dein#add('freitass/todo.txt-vim')
-call dein#add('SirVer/ultisnips')
+"call dein#add('SirVer/ultisnips')
 call dein#add('honza/vim-snippets')
 
 " useability
@@ -42,15 +42,15 @@ call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-fugitive')
 call dein#add('Chiel92/vim-autoformat')
 call dein#add('editorconfig/editorconfig-vim')
-call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
+"call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
 call dein#add('ternjs/tern_for_vim')
 call dein#add('Raimondi/delimitMate')
 call dein#add('mhinz/vim-signify')
 
-" Language specific plugin 
+" Language specific plugin
 " javascript
 call dein#add('pangloss/vim-javascript')
-" typescript 
+" typescript
 call dein#add('leafgarland/typescript-vim')
 call dein#add('Quramy/tsuquyomi')
 
@@ -180,6 +180,9 @@ nnoremap <silent> <leader>s :set spell!<CR>
 nnoremap <leader>ec :EvervimCreateNote<CR>
 nnoremap <leader>en :EvervimNotebookList<CR>
 nnoremap <leader>et :EvervimListTags<CR>
+
+nnoremap <leader>acs / at <CR>i<CR><ESC>
+
 " }}}
 "###############################################################################
 " {{{ AUTOCMD:
@@ -188,9 +191,9 @@ nnoremap <leader>et :EvervimListTags<CR>
 " autoformat on write
 augroup autoformat
 	autocmd!
-	" All files 
+	" All files
 	"au BufWrite * :Autoformat
-	" Only certain files 
+	" Only certain files
 	au BufWrite *.ts,*.js,*.html,*.css,*.json :Autoformat<CR>
 augroup END
 augroup filetype_xml
@@ -271,7 +274,7 @@ nmap <A-j> ]e
 vmap <A-k> [egv
 vmap <A-j> ]egv
 
-" TODO check if this work or clean 
+" TODO check if this work or clean
 " pomodoro airline :
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -301,7 +304,7 @@ if has('statusline')
 	set statusline+=%*
 endif
 
-"github issue open in the current window 
+"github issue open in the current window
 let g:github_same_window = 1
 let g:gissues_async_omni = 1
 
@@ -333,7 +336,7 @@ let g:tern_show_argument_hints='on_hold'
 " YouCompleteMe from the arch wiki
 let g:EclimCompletionMethod = 'omnifunc'
 " by default there no completion on gitcommit file but I want it for
-" github-issues plugin 
+" github-issues plugin
 let g:ycm_filetype_specific_completion_to_disable = { }
 " manual mode ;)
 let g:ycm_auto_trigger = 0
@@ -347,7 +350,7 @@ let g:ctrlp_map = '<leader>t'
 " Ignore these directories
 let g:ctrlp_cmd = 'CtrlP'
 
-" shortcut for mru 
+" shortcut for mru
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 let g:ctrlp_working_path_mode = 'ra'
@@ -375,4 +378,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:signify_vcs_list= ['git']
 
 " }}]
-" 
+"
