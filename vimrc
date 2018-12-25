@@ -47,6 +47,8 @@ call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer
 call dein#add('ternjs/tern_for_vim', {'build': 'npm install'})
 call dein#add('Raimondi/delimitMate')
 call dein#add('mhinz/vim-signify')
+call dein#add('andreshazard/vim-logreview')
+
 " refactor
 call dein#add('LucHermitte/lh-vim-lib')
 call dein#add('LucHermitte/lh-tags')
