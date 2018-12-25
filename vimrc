@@ -48,6 +48,7 @@ call dein#add('ternjs/tern_for_vim', {'build': 'npm install'})
 call dein#add('Raimondi/delimitMate')
 call dein#add('mhinz/vim-signify')
 call dein#add('andreshazard/vim-logreview')
+call dein#add('davidhalter/jedi-vim')
 
 " refactor
 call dein#add('LucHermitte/lh-vim-lib')
