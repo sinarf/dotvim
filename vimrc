@@ -1,4 +1,3 @@
-" vim:fdm=marker
 " sinarf vimrc
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -14,12 +13,13 @@ let maplocalleader = ";"
 if &compatible
 	set nocompatible
 endif
+
 filetype off
 " append to runtime path
-if has("unix") 
-	set rtp+=/usr/share/vim/vimfiles
-else 
+if ! has("win32") || !has("win64")	|| ! has("win32unix")
 	set rtp+=~/dein.vim
+else 
+	set rtp+=/usr/share/vim/vimfiles
 endif
 " initialize dein, plugins are installed to this directory
 call dein#begin(expand('~/.cache/dein'))
@@ -47,7 +47,11 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('jaxbot/github-issues.vim')
 call dein#add('Chiel92/vim-autoformat')
 call dein#add('editorconfig/editorconfig-vim')
-call dein#add('Valloric/YouCompleteMe', {'build': './install.py --tern-completer'})
+if !has("win32") && !has("win64") && !has("win32unix")
+	" this plugin is a pain on windows, and I don't do any real work on
+	" windows anyway :) 
+	call dein#add('Valloric/YouCompleteMe', {'build': './install.py --all'})
+endif
 call dein#add('ternjs/tern_for_vim', {'build': 'npm install'})
 call dein#add('Raimondi/delimitMate')
 call dein#add('mhinz/vim-signify')
@@ -85,6 +89,7 @@ call dein#end()
 if dein#check_install()
 	call dein#install()
 endif
+
 filetype plugin on
 
 " }}}
