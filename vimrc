@@ -16,7 +16,11 @@ if &compatible
 endif
 filetype off
 " append to runtime path
-set rtp+=/usr/share/vim/vimfiles
+if has("unix") 
+	set rtp+=/usr/share/vim/vimfiles
+else 
+	set rtp+=~/dein.vim
+endif
 " initialize dein, plugins are installed to this directory
 call dein#begin(expand('~/.cache/dein'))
 
