@@ -4,7 +4,8 @@
 "##############################################################################
 
 if has('win32') || has('win64')
-	set guifont=Consolas:h10
+"	set guifont=Consolas:h10
+	set guifont=Monaco:h8
 elseif has('unix')
 	"set guifont=Ubuntu\ Mono\ 20
 	"set guifont=Fantasque\ Sans\ Mono\ 20
