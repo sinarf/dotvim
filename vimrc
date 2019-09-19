@@ -217,7 +217,6 @@ augroup filetype_vimwiki
 	autocmd BufEnter *.wiki silent! lcd %:p:h
 	autocmd BufRead,BufWritePre diary.wiki :VimwikiDiaryGenerateLinks
 	autocmd Filetype vimwiki setlocal spell
-	autocmd BufWritePost *.wiki :Vimwiki2HTML
 augroup END
 
 
@@ -291,7 +290,7 @@ let g:tomato#remind = "☻"
 let g:tomato#restinfo = "☺"
 
 " vim wiki
-let g:vimwiki_list = [{'path': '~/Dropbox/wiki/'}]
+let g:vimwiki_list = [{'path': 'd:/wiki/'}]
 let g:vimwiki_folding = 1
 
 " disable the airline tmux extension
