@@ -73,6 +73,9 @@ call dein#add('vimwiki/vimwiki')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('morhetz/gruvbox')
 
+" Plugin windows : 
+call dein#add('PProvost/vim-ps1')
+
 " exit dein
 call dein#end()
 " auto-install missing packages on startup
