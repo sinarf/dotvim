@@ -57,6 +57,8 @@ call dein#add('Raimondi/delimitMate')
 call dein#add('mhinz/vim-signify')
 call dein#add('andreshazard/vim-logreview')
 call dein#add('davidhalter/jedi-vim')
+call dein#add('godlygeek/tabular')
+call dein#add('plasticboy/vim-markdown')
 
 " Language specific plugin 
 " javascript
