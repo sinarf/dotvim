@@ -387,5 +387,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " vim signify configuration
 let g:signify_vcs_list= ['git']
 
+"  markdown plugin : 
+let g:vim_markdown_folding_disabled = 1
 " }}]
 " 
