@@ -57,13 +57,8 @@ call dein#add('Raimondi/delimitMate')
 call dein#add('mhinz/vim-signify')
 call dein#add('andreshazard/vim-logreview')
 call dein#add('davidhalter/jedi-vim')
-
-" refactor
-call dein#add('LucHermitte/lh-vim-lib')
-call dein#add('LucHermitte/lh-tags')
-call dein#add('LucHermitte/lh-dev')
-call dein#add('LucHermitte/lh-brackets')
-call dein#add('LucHermitte/vim-refactor')
+call dein#add('godlygeek/tabular')
+call dein#add('plasticboy/vim-markdown')
 
 " Language specific plugin 
 " javascript
@@ -75,9 +70,6 @@ call dein#add('Quramy/tsuquyomi')
 " Writing
 call dein#add('parkr/vim-jekyll')
 call dein#add('vimwiki/vimwiki')
-call dein#add('xolox/vim-notes')
-" vim-notes dependency
-call dein#add('xolox/vim-misc')
 
 " eye candy
 call dein#add('altercation/vim-colors-solarized')
