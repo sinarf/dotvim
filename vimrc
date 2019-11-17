@@ -47,11 +47,8 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('jaxbot/github-issues.vim')
 call dein#add('Chiel92/vim-autoformat')
 call dein#add('editorconfig/editorconfig-vim')
-if !has("win32") && !has("win64") && !has("win32unix")
-	" this plugin is a pain on windows, and I don't do any real work on
-	" windows anyway :) 
-	call dein#add('Valloric/YouCompleteMe', {'build': './install.py --all'})
-endif
+call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
+
 call dein#add('ternjs/tern_for_vim', {'build': 'npm install'})
 call dein#add('Raimondi/delimitMate')
 call dein#add('mhinz/vim-signify')
