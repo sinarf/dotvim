@@ -384,5 +384,17 @@ let g:signify_vcs_list= ['git']
 
 "  markdown plugin : 
 let g:vim_markdown_folding_disabled = 1
+
+" 
+" COC configuration
+"
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " }}]
 " 
