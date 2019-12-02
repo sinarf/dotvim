@@ -29,8 +29,6 @@ call dein#add('PotatoesMaster/i3-vim-syntax')
 
 " productivity
 call dein#add('freitass/todo.txt-vim')
-call dein#add('SirVer/ultisnips')
-call dein#add('honza/vim-snippets')
 
 " useability
 call dein#add('vim-airline/vim-airline')
