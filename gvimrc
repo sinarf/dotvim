@@ -4,8 +4,8 @@
 "##############################################################################
 
 if has('win32') || has('win64')
-"	set guifont=Consolas:h10
-	set guifont=Monaco:h8
+	set guifont=Consolas:h12
+	"set guifont=Monaco:h10
 elseif has('unix')
 	"set guifont=Ubuntu\ Mono\ 20
 	"set guifont=Fantasque\ Sans\ Mono\ 20
@@ -28,7 +28,7 @@ syntax enable
 " let g:solarized_menu=1
 
 " Size of GVim window
-set lines=50 columns=120
+set lines=30 columns=120
 " Don't display the menu or toolbar. Just the screen.
 set guioptions-=m
 set guioptions-=T
