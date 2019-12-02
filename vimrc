@@ -131,6 +131,7 @@ if has('win32') || has ('win64')
 	set shell=C:\cygwin\bin\bash.exe\ -login
 	set shellcmdflag=-c
 	set shellquote=\"
+	set pythonthreedll=python38.dll
 else
 	let $VIMHOME = $HOME."/.vim"
 endif
