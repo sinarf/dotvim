@@ -162,6 +162,9 @@ nnoremap <leader>f :Autoformat<CR>
 "NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 
+" change to current directory
+nnoremap <leader>d :cd %:p:h<CR>
+
 " swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
 nnoremap <leader>tm :set filetype=markdown<CR>
@@ -245,9 +248,15 @@ augroup filetype_markdown
 	autocmd BufNewFile,BufRead *.md setf=markdown
 	autocmd FileType markdown setlocal spell spelllang=fr
 augroup END
+
 augroup fileype_txt
 	autocmd!
 	autocmd FileType text setlocal spell spelllang=fr
+augroup END
+
+augroup fileype_sh
+	autocmd!
+	autocmd FileType sh :cd %:p:h 
 augroup END
 
 " }}}
