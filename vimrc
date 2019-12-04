@@ -159,6 +159,9 @@ nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 " Autoformat
 nnoremap <leader>f :Autoformat<CR>
 
+"NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+
 " swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
 nnoremap <leader>tm :set filetype=markdown<CR>
@@ -380,10 +383,11 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " vim signify configuration
-let g:signify_vcs_list= ['git']
+let g:signify_vcs_list= ['git', 'svn']
 
 "  markdown plugin : 
 let g:vim_markdown_folding_disabled = 1
+
 
 " 
 " COC configuration
