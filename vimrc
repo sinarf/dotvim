@@ -28,7 +28,7 @@ call dein#begin(expand('~/.cache/dein'))
 call dein#add('PotatoesMaster/i3-vim-syntax')
 
 " productivity
-call dein#add('freitass/todo.txt-vim')
+call dein#add('https://gitlab.com/dbeniamine/todo.txt-vim.git')
 
 " useability
 call dein#add('vim-airline/vim-airline')
