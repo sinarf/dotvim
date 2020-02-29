@@ -9,7 +9,7 @@ if has('win32') || has('win64')
 elseif has('unix')
 	"set guifont=Ubuntu\ Mono\ 20
 	set guifont=Fantasque\ Sans\ Mono\ 20
-	"set guifont=OpenDyslexicMono\ 16
+	"set guifont=OpenDyslexicMono\ 18
 	"set guifont=Monaco\ 14
 endif
 syntax enable
