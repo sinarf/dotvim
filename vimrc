@@ -29,6 +29,8 @@ call dein#add('PotatoesMaster/i3-vim-syntax')
 
 " productivity
 call dein#add('https://gitlab.com/dbeniamine/todo.txt-vim.git')
+call dein#add('aklt/plantuml-syntax')
+call dein#add('scrooloose/vim-slumlord')
 
 " useability
 call dein#add('vim-airline/vim-airline')
@@ -53,6 +55,7 @@ call dein#add('mhinz/vim-signify')
 call dein#add('andreshazard/vim-logreview')
 call dein#add('godlygeek/tabular')
 call dein#add('plasticboy/vim-markdown')
+call dein#add('mikelue/vim-maven-plugin')
 
 " Language specific plugin 
 " javascript
@@ -110,6 +113,7 @@ set ff=unix
 set ffs=unix,dos
 set encoding=utf-8
 set fileencoding=utf-8
+set relativenumber
 set number
 set foldenable
 " wrapping not cutting words in the middle: source : http://stackoverflow.com/questions/744159/word-wrap-in-gvim
@@ -158,6 +162,12 @@ nnoremap <leader>egv :e $VIMHOME/gvimrc<CR>
 
 " Autoformat
 nnoremap <leader>f :Autoformat<CR>
+
+"NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+
+" change to current directory
+nnoremap <leader>d :cd %:p:h<CR>
 
 " swith to the more used filetypes
 nnoremap <leader>tx :set filetype=xml<CR>
@@ -242,9 +252,15 @@ augroup filetype_markdown
 	autocmd BufNewFile,BufRead *.md setf=markdown
 	autocmd FileType markdown setlocal spell spelllang=fr
 augroup END
+
 augroup fileype_txt
 	autocmd!
 	autocmd FileType text setlocal spell spelllang=fr
+augroup END
+
+augroup fileype_sh
+	autocmd!
+	autocmd FileType sh :cd %:p:h 
 augroup END
 
 " }}}
@@ -288,7 +304,7 @@ let g:tomato#restinfo = "☺"
 
 " vim wiki
 let g:vimwiki_list = [{'path': 'd:/wiki/'}]
-let g:vimwiki_folding = 1
+let g:vimwiki_folding = ''
 
 " disable the airline tmux extension
 let g:airline#extensions#tmuxline#enabled = 0
@@ -374,16 +390,12 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|bu
 let g:notes_directories = [ '~/Dropbox/texts']
 let g:notes_suffix = '.txt'
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " vim signify configuration
-let g:signify_vcs_list= ['git']
+let g:signify_vcs_list= ['git', 'svn']
 
 "  markdown plugin : 
 let g:vim_markdown_folding_disabled = 1
+
 
 " 
 " COC configuration

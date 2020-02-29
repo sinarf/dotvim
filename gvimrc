@@ -37,3 +37,4 @@ set guioptions-=r
 set guioptions-=b
 
 colorscheme gruvbox
+"colorscheme solarized
