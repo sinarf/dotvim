@@ -102,7 +102,7 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 " some stuff are not publicly availlable
-source ~/Dropbox/config/vim/secretsauce.vim
+source ~/Sync/config/vim/secretsauce.vim
 
 set hidden
 set ignorecase
@@ -388,7 +388,7 @@ set wildignore+=**/dist/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
 
 " vim-notes
-let g:notes_directories = [ '~/Dropbox/texts']
+let g:notes_directories = [ '~/Sync/texts']
 let g:notes_suffix = '.txt'
 
 " vim signify configuration
