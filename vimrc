@@ -67,6 +67,7 @@ call dein#add('Quramy/tsuquyomi')
 " Writing
 call dein#add('parkr/vim-jekyll')
 call dein#add('vimwiki/vimwiki')
+call dein#add('habamax/vim-asciidoctor')
 
 " eye candy
 call dein#add('altercation/vim-colors-solarized')
