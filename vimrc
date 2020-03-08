@@ -72,6 +72,7 @@ call dein#add('habamax/vim-asciidoctor')
 " eye candy
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('morhetz/gruvbox')
+call dein#add('flazz/vim-colorschemes')
 
 " Plugin windows :
 call dein#add('PProvost/vim-ps1')

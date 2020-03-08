@@ -36,5 +36,7 @@ set guioptions-=l
 set guioptions-=r
 set guioptions-=b
 
-colorscheme gruvbox
+"colorscheme gruvbox
+"colorscheme spacegray
+colorscheme space-vim-dark
 "colorscheme solarized
