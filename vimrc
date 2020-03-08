@@ -18,7 +18,7 @@ filetype off
 " append to runtime path
 if ! has("win32") || !has("win64")	|| ! has("win32unix")
 	set rtp+=~/dein.vim
-else 
+else
 	set rtp+=/usr/share/vim/vimfiles
 endif
 " initialize dein, plugins are installed to this directory
@@ -31,6 +31,7 @@ call dein#add('PotatoesMaster/i3-vim-syntax')
 call dein#add('https://gitlab.com/dbeniamine/todo.txt-vim.git')
 call dein#add('aklt/plantuml-syntax')
 call dein#add('scrooloose/vim-slumlord')
+call dein#add('asciidoc/vim-asciidoc')
 
 " useability
 call dein#add('vim-airline/vim-airline')
@@ -55,12 +56,11 @@ call dein#add('mhinz/vim-signify')
 call dein#add('andreshazard/vim-logreview')
 call dein#add('godlygeek/tabular')
 call dein#add('plasticboy/vim-markdown')
-call dein#add('mikelue/vim-maven-plugin')
 
-" Language specific plugin 
+" Language specific plugin
 " javascript
 call dein#add('pangloss/vim-javascript')
-" typescript 
+" typescript
 call dein#add('leafgarland/typescript-vim')
 call dein#add('Quramy/tsuquyomi')
 
@@ -72,7 +72,7 @@ call dein#add('vimwiki/vimwiki')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('morhetz/gruvbox')
 
-" Plugin windows : 
+" Plugin windows :
 call dein#add('PProvost/vim-ps1')
 
 " exit dein
@@ -101,7 +101,7 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 " some stuff are not publicly availlable
-source ~/Dropbox/config/vim/secretsauce.vim
+source ~/Sync/config/vim/secretsauce.vim
 
 set hidden
 set ignorecase
@@ -207,9 +207,9 @@ nnoremap <leader>et :EvervimListTags<CR>
 " autoformat on write
 augroup autoformat
 	autocmd!
-	" All files 
+	" All files
 	"au BufWrite * :Autoformat
-	" Only certain files 
+	" Only certain files
 	au BufWrite *.ts,*.js,*.html,*.css,*.json :Autoformat<CR>
 augroup END
 augroup filetype_xml
@@ -251,6 +251,8 @@ augroup filetype_markdown
 	autocmd!
 	autocmd BufNewFile,BufRead *.md setf=markdown
 	autocmd FileType markdown setlocal spell spelllang=fr
+	" remove trailling spaces
+	autocmd BufWritePre * %s/\s\+$//e
 augroup END
 
 augroup fileype_txt
@@ -260,7 +262,7 @@ augroup END
 
 augroup fileype_sh
 	autocmd!
-	autocmd FileType sh :cd %:p:h 
+	autocmd FileType sh :cd %:p:h
 augroup END
 
 " }}}
@@ -295,7 +297,7 @@ nmap <A-j> ]e
 vmap <A-k> [egv
 vmap <A-j> ]egv
 
-" TODO check if this work or clean 
+" TODO check if this work or clean
 " pomodoro airline :
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -325,7 +327,7 @@ if has('statusline')
 	set statusline+=%*
 endif
 
-"github issue open in the current window 
+"github issue open in the current window
 let g:github_same_window = 1
 let g:gissues_async_omni = 1
 
@@ -357,7 +359,7 @@ let g:tern_show_argument_hints='on_hold'
 " YouCompleteMe from the arch wiki
 let g:EclimCompletionMethod = 'omnifunc'
 " by default there no completion on gitcommit file but I want it for
-" github-issues plugin 
+" github-issues plugin
 let g:ycm_filetype_specific_completion_to_disable = { }
 " manual mode ;)
 let g:ycm_auto_trigger = 0
@@ -371,7 +373,7 @@ let g:ctrlp_map = '<leader>t'
 " Ignore these directories
 let g:ctrlp_cmd = 'CtrlP'
 
-" shortcut for mru 
+" shortcut for mru
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 let g:ctrlp_working_path_mode = 'ra'
@@ -386,18 +388,15 @@ set wildignore+=*/node_modules/*
 set wildignore+=**/dist/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
 
-" vim-notes
-let g:notes_directories = [ '~/Dropbox/texts']
-let g:notes_suffix = '.txt'
 
 " vim signify configuration
 let g:signify_vcs_list= ['git', 'svn']
 
-"  markdown plugin : 
+"  markdown plugin :
 let g:vim_markdown_folding_disabled = 1
 
 
-" 
+"
 " COC configuration
 "
 
@@ -418,4 +417,4 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " }}]
-" 
+"
