@@ -67,6 +67,7 @@ call dein#add('Quramy/tsuquyomi')
 " Writing
 call dein#add('parkr/vim-jekyll')
 call dein#add('vimwiki/vimwiki')
+call dein#add('habamax/vim-asciidoctor')
 
 " eye candy
 call dein#add('altercation/vim-colors-solarized')
@@ -323,7 +324,6 @@ if has('statusline')
 	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 	set statusline+=%#warningmsg#
 	set statusline+=%{SyntasticStatuslineFlag()}
-	set statusline+=%{eclim#project#util#ProjectStatusLine()}
 	set statusline+=%*
 endif
 
@@ -344,20 +344,8 @@ let g:calendar_google_task = 1
 " conoline autostart
 let g:conoline_auto_enable = 1
 
-" angular plugin
-let g:angular_source_directory = 'src'
-let g:angular_test_directory = 'test'
-
-" eclim
-let g:EclimProjectStatusLine = 'eclim(p=${name}, n=${natures})'
-
-"enable keyboard shortcuts
-let g:tern_map_keys=1
-"show argument hints
-let g:tern_show_argument_hints='on_hold'
 
 " YouCompleteMe from the arch wiki
-let g:EclimCompletionMethod = 'omnifunc'
 " by default there no completion on gitcommit file but I want it for
 " github-issues plugin
 let g:ycm_filetype_specific_completion_to_disable = { }
@@ -387,7 +375,6 @@ set wildignore+=*.zip
 set wildignore+=*/node_modules/*
 set wildignore+=**/dist/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site|target|bin|build'
-
 
 " vim signify configuration
 let g:signify_vcs_list= ['git', 'svn']
