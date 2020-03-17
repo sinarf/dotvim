@@ -3,6 +3,8 @@ This is my dot vim configuration.
 
 *You should know that I change my settings like crazy and I break my installation very often.*
 
+*I am currently switching to neovim*. My neovim files can be found at : https://framagit.org/sinarf/dotneovim
+
 ## Prerequisites : 
 	* vim should have been built with python support (needed for some plugins).
 	* dein bundle manager should be installed see: https://github.com/Shougo/dein.vim
