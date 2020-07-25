@@ -5,8 +5,12 @@ This is my third reboot of my dotvim configuration. I had a bunch of stuff rando
 
 ## Prerequisites : 
 
-* curl and git should be installed and fully functionnal. 
-* vim should have been built with python support (needed for some plugins).
+* The following software are needed:
+    
+    * git
+    * curl
+    * fzf
+    * vim with Python support enable
 
 ## Installation
 
