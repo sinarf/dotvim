@@ -72,6 +72,19 @@ elseif has('unix')
     set guifont=Cascadia\ Code:h14
 endif
 
+let s:dir = '~/.local/share/vim'
+if isdirectory(expand(s:dir))
+	if &directory =~# '^\.,'
+		let &directory = expand(s:dir) . '/swap//,' . &directory
+	endif
+	if &backupdir =~# '^\.,'
+		let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+	endif
+	if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+		let &undodir = expand(s:dir) . '/undo//,' . &undodir
+	endif
+endif
+
 
 " some stuff are not publicly availlabli
 " source ~/Sync/config/vim/secretsauce.vim
