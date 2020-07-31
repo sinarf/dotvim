@@ -74,15 +74,15 @@ endif
 
 let s:dir = '~/.local/share/vim'
 if isdirectory(expand(s:dir))
-	if &directory =~# '^\.,'
-		let &directory = expand(s:dir) . '/swap//,' . &directory
-	endif
-	if &backupdir =~# '^\.,'
-		let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
-	endif
-	if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-		let &undodir = expand(s:dir) . '/undo//,' . &undodir
-	endif
+    if &directory =~# '^\.,'
+        let &directory = expand(s:dir) . '/swap//,' . &directory
+    endif
+    if &backupdir =~# '^\.,'
+        let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+    endif
+    if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+        let &undodir = expand(s:dir) . '/undo//,' . &undodir
+    endif
 endif
 
 
@@ -101,7 +101,7 @@ nnoremap <leader>h <C-W><C-H>
 nnoremap ww <C-w>
 
 " keymaping to edit this file.
-nnoremap <leader>ev :exe 'edit ~/.vim/vimrc'<CR>
+nnoremap <leader>ev :e $MYVIMRC<CR>
 " mapping for source this (the current file)
 nnoremap <leader>st :source %<CR>
 
@@ -167,10 +167,6 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" Bash IDE
-let g:BASH_AuthorName   = 'Michel (sinarf) Blavin'
-let g:BASH_Email        = 'sinarf@sinarf.org'
-
 "Rope
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
@@ -188,16 +184,28 @@ nnoremap <leader>gps :Gpush<CR>
 " fzf mapping
 " find files
 nnoremap <leader>ff :Files<CR>
-" find file in git 
+" find file in git
 nnoremap <leader>fg :GFiles<CR>
 " MRU
 nnoremap <leader>fh :History<CR>
 " Find in files
 nnoremap <leader>fi :Rg<CR>
 
-" Historique des commandes 
+" Historique des commandes
 nnoremap <leader>ch :History:<CR>
 
 nnoremap <leader>bl :Buffers<CR>
 nnoremap <leader>wl :Windows<CR>
+
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
+
+
+if has('gui_running')
+    " Size of GVim window
+    set lines=50 columns=120
+    " Don't display the menu or toolbar. Just the screen.
+    " set guioptions-=m
+    set guioptions-=T
+endif
 
