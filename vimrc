@@ -47,6 +47,7 @@ Plug 'mattn/webapi-vim' " needed for vim-gist
 " syntax file
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'thanethomson/vim-jenkinsfile'
+Plug 'cespare/vim-toml'
 
 " Developpement
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
