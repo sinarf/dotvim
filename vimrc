@@ -52,6 +52,7 @@ Plug 'thanethomson/vim-jenkinsfile'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdcommenter'
+Plug 'wayhome/riv.vim'
 
 " Python
 Plug 'vim-scripts/indentpython.vim'
