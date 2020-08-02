@@ -20,6 +20,7 @@ set encoding=utf-8
 set incsearch
 set smartcase
 " Make the clipboard work
+set pastetoggle=<F2>
 set clipboard=unnamed
 
 " wrapping not cutting words in the middle: source : http://stackoverflow.com/questions/744159/word-wrap-in-gvim
@@ -205,7 +206,7 @@ nnoremap <leader>wl :Windows<CR>
 " Empty value to disable preview window altogether
 let g:fzf_preview_window = ''
 
-
+" Option for gvim 
 if has('gui_running')
     " Size of GVim window
     set lines=50 columns=120
