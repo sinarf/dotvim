@@ -1,6 +1,3 @@
-" @author Michel (sinarf) Blavin
-"
-
 " change the leader keys
 let mapleader = " "
 let maplocalleader = ","
@@ -63,6 +60,7 @@ Plug 'wayhome/riv.vim'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8' " PEP8 checking
 Plug 'python-rope/ropevim' " refactoring
+Plug 'alfredodeza/pytest.vim' " test
 
 " Eye candy
 Plug 'morhetz/gruvbox'
@@ -97,7 +95,7 @@ set backup
 set undofile
 
 " automaticaly source vimrc on edition
-autocmd! BufWritePost .vimrc source %
+autocmd! BufWritePost .vimrc,vimrc source %
 
 " some stuff are not publicly availlabli
 source ~/Sync/config/vim/secretsauce.vim
@@ -144,6 +142,7 @@ augroup END
 augroup filetype_python
     autocmd!
     autocmd BufWritePost *.py call flake8#Flake8()
+    autocmd BufWritePost *.py Pytest project
 augroup END
 
 " autoformat on write
