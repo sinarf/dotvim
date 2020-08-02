@@ -8,6 +8,7 @@ let maplocalleader = ","
 " enable this for debug
 "set verbose=9
 
+
 set hidden
 set number relativenumber
 set cursorline
@@ -19,6 +20,7 @@ set encoding=utf-8
 " searching
 set incsearch
 set smartcase
+
 " Make the clipboard work
 set pastetoggle=<F2>
 set clipboard=unnamed
@@ -76,6 +78,7 @@ elseif has('unix')
     set guifont=Cascadia\ Code:h18
 endif
 
+" central place for vim working files
 let s:dir = '~/.local/share/vim'
 if isdirectory(expand(s:dir))
     if &directory =~# '^\.,'
@@ -88,6 +91,10 @@ if isdirectory(expand(s:dir))
         let &undodir = expand(s:dir) . '/undo//,' . &undodir
     endif
 endif
+" keep a backup of edited files
+set backup
+" make undos persistent 
+set undofile
 
 " automaticaly source vimrc on edition
 autocmd! BufWritePost .vimrc source %
