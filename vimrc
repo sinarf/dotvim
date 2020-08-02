@@ -1,4 +1,3 @@
-"
 " @author Michel (sinarf) Blavin
 "
 
@@ -20,6 +19,8 @@ set encoding=utf-8
 " searching
 set incsearch
 set smartcase
+" Make the clipboard work
+set clipboard=unnamed
 
 " wrapping not cutting words in the middle: source : http://stackoverflow.com/questions/744159/word-wrap-in-gvim
 set formatoptions=l
@@ -71,7 +72,7 @@ call plug#end()
 if has('win32') || has('win64')
     set guifont=Cascadia\ Code:h12
 elseif has('unix')
-    set guifont=Cascadia\ Code:h14
+    set guifont=Cascadia\ Code:h18
 endif
 
 let s:dir = '~/.local/share/vim'
@@ -87,9 +88,11 @@ if isdirectory(expand(s:dir))
     endif
 endif
 
+" automaticaly source vimrc on edition
+autocmd! BufWritePost .vimrc source %
 
 " some stuff are not publicly availlabli
-" source ~/Sync/config/vim/secretsauce.vim
+source ~/Sync/config/vim/secretsauce.vim
 
 colorscheme gruvbox
 set background=dark
@@ -210,4 +213,3 @@ if has('gui_running')
     " set guioptions-=m
     set guioptions-=T
 endif
-
