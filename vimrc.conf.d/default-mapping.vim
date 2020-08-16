@@ -22,3 +22,4 @@ if has('gui_running')
     set guioptions-=T
 endif
 
+au FocusLost *.rst,*.md :w

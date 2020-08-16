@@ -10,6 +10,7 @@ Introduction
 
 This is my third reboot of my dotvim configuration. I had a bunch of stuff randomly pasted from various place, a big clean up. 
 
+
 Prerequisites (might miss some stuff): 
 =======================================
 
@@ -27,3 +28,5 @@ Installation
 * Clone this repo in .vim directory
 * Run ``:PlugClean``
 * Run ``:PlugInstall`
+* Run ``:CocInstall coc-explorer coc-vimlsp coc-marketplace coc-snippets``
+
