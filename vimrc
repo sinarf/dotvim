@@ -143,6 +143,7 @@ augroup filetype_python
     autocmd!
     autocmd BufWritePost *.py call flake8#Flake8()
     autocmd BufWritePost *.py Pytest project
+    autocmd BufWritePre *.py %s/\s\+$//e
 augroup END
 
 " autoformat on write
