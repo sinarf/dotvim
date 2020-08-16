@@ -26,6 +26,7 @@ Plug 'cespare/vim-toml'
 
 " Developpement
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
 Plug 'preservim/nerdcommenter'
 
 " Python

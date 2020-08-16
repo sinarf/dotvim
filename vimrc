@@ -22,4 +22,3 @@ source ~/Sync/config/vim/secretsauce.vim
 autocmd! BufWritePost .vimrc,vimrc,$HOME/.vim/* source $MYVIMRC
 
 
-
