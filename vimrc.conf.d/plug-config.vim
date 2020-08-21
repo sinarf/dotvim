@@ -8,6 +8,8 @@ Plug 'tpope/vim-sensible'
 " LifeHacks
 Plug 'mhinz/vim-startify'
 Plug 'wayhome/riv.vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'scrooloose/vim-slumlord'
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
