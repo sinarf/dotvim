@@ -2,26 +2,37 @@ TODO
 ====
 
 Legend of the list below: 
+
 * [ ] Thing I want to be able to do with vim. 
 * [o] IN PROGRESS
 * [X] 2020-08-25 This is a feature ;)
 
 * [o] Documentation
-  * [X] 2020-08-25 Installation of this dot files
-    * [X] 2020-08-25 Linux Installation 
-    * [X] 2020-08-25 Windows Installation 
-  * [X] 2020-08-25 Add feature list (this file)
+  
+  - [X] 2020-08-25 Installation of this dot files
+
+    + [X] 2020-08-25 Linux Installation 
+    + [X] 2020-08-25 Windows Installation 
+
+  - [X] 2020-08-25 Add feature list (this file)
+  - [ ] Document Pre requisites
+
 * Add an OpenUrl function
+
 * [o] setup Python dev
-  * [X] 2020-08-25 Lint
-  * [X] 2020-08-25 Code completion
-  * [X] 2020-08-25 Test 
-  * Document Pre requisites
+  
+  - [X] 2020-08-25 Lint
+  - [X] 2020-08-25 Code completion
+  - [X] 2020-08-25 Test 
+
 * Setup bash dev
-  * [o] Lint
-  * [o] Code completion
-  * [ ] Test 
+  
+  - [o] Lint
+  - [o] Code completion
+  - [ ] Test 
+
 * reStructuredText using Riv
-  * Disable folding (rant: folding is a useless feature, if you need folding it's because your file are too big)
-  * How to handle sublevel bullet lists
+
+  - [ ] Disable folding (rant: folding is a useless feature, if you need folding it's because your file are too big)
+  - [ ] How to handle sublevel bullet lists
 
