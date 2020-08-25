@@ -10,6 +10,18 @@ Introduction
 
 This is my third reboot of my dotvim configuration. I had a bunch of stuff randomly pasted from various place, a big clean up. 
 
+TODO
+====
+
+* [ ] setup Python dev
+  * [X] 2020-08-25 Lint
+  * [X] 2020-08-25 Code completion
+  * [X] 2020-08-25 Test 
+* [ ] Disable folding on rst files
+* Setup bash dev
+  * [o] Lint
+  * [o] Code completion
+  * [o] Test 
 
 Prerequisites (might miss some stuff): 
 =======================================
