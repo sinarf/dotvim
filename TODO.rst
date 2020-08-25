@@ -11,6 +11,7 @@ Legend of the list below:
     * [X] 2020-08-25 Linux Installation 
     * [X] 2020-08-25 Windows Installation 
   * [X] 2020-08-25 Add feature list (this file)
+* Add an OpenUrl function
 * [o] setup Python dev
   * [X] 2020-08-25 Lint
   * [X] 2020-08-25 Code completion
