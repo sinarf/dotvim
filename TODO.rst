@@ -34,5 +34,5 @@ Legend of the list below:
 * reStructuredText using Riv
 
   - [ ] Disable folding (rant: folding is a useless feature, if you need folding it's because your file are too big)
-  - [ ] How to handle sublevel bullet lists
+  - [X] 2020-08-25 How to handle sublevel bullet lists
 
