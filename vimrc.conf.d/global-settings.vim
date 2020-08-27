@@ -35,16 +35,6 @@ set undofile
 set spell
 set spelllang=fr,en
 
-if has('win32') || has('win64')
-    set guifont=Cascadia\ Code:h12
-elseif has('unix')
-    set guifont=Cascadia\ Code:h18
-endif
-
-
-colorscheme gruvbox
-set background=dark
-
 let s:dir = '~/.local/share/vim'
 if isdirectory(expand(s:dir))
 	if &directory =~# '^\.,'

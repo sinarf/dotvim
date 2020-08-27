@@ -7,6 +7,7 @@
 " source configuration files
 source $HOME/.vim/vimrc.conf.d/plug-config.vim
 source $HOME/.vim/vimrc.conf.d/global-settings.vim
+source $HOME/.vim/vimrc.conf.d/gui-settings.vim
 source $HOME/.vim/vimrc.conf.d/default-mapping.vim
 source $HOME/.vim/vimrc.conf.d/functions.vim
 source $HOME/.vim/vimrc.conf.d/coc.vim
